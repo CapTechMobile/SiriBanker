@@ -17,7 +17,6 @@ class AccountsSummaryViewController: UIViewController {
 
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 121
         tableView.tableFooterView = UIView()
     }
 }
@@ -41,4 +40,14 @@ extension AccountsSummaryViewController: UITableViewDataSource {
 }
 
 extension AccountsSummaryViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let account = customer.accounts[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let detailsView = storyboard.instantiateViewController(withIdentifier: "AccountDetailsViewController") as? AccountDetailsViewController else {
+            return
+        }
+        detailsView.account = account
+        navigationController?.pushViewController(detailsView, animated: true)
+    }
 }

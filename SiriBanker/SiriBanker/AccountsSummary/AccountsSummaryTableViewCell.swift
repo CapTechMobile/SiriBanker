@@ -9,7 +9,6 @@
 import UIKit
 
 class AccountsSummaryTableViewCell: UITableViewCell {
-    @IBOutlet var gradientView: UIView!
     @IBOutlet var accountTypeLabel: UILabel!
     @IBOutlet var accountBalanceLabel: UILabel!
     @IBOutlet var accountNumberLabel: UILabel!
