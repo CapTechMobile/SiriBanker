@@ -10,12 +10,11 @@ import UIKit
 
 class TransactionTableViewCell: UITableViewCell {
 
-	@IBOutlet weak var memoLabel: UILabel!
-	@IBOutlet weak var amountLabel: UILabel!
-	@IBOutlet weak var dateLabel: UILabel!
-	
-	
-	override func awakeFromNib() {
+    @IBOutlet weak var memoLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+
+    override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
@@ -25,5 +24,4 @@ class TransactionTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }
