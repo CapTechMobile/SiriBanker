@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A281F20CB1AC200858CCB /* AppDelegate.swift */; };
-		589A282220CB1AC200858CCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A282120CB1AC200858CCB /* ViewController.swift */; };
 		589A282520CB1AC200858CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589A282320CB1AC200858CCB /* Main.storyboard */; };
 		589A282720CB1AC400858CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589A282620CB1AC400858CCB /* Assets.xcassets */; };
 		589A282A20CB1AC400858CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589A282820CB1AC400858CCB /* LaunchScreen.storyboard */; };
@@ -18,7 +17,8 @@
 		589A284720CB1FB100858CCB /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284620CB1FB100858CCB /* Account.swift */; };
 		589A284920CB1FBF00858CCB /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284820CB1FBF00858CCB /* Transaction.swift */; };
 		589A284B20CB1FD600858CCB /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284A20CB1FD600858CCB /* Customer.swift */; };
-		589A284F20CB214C00858CCB /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284E20CB214C00858CCB /* Formatter.swift */; };
+		E3FAE7C720CB21D70045A573 /* AccountsSummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7C520CB21D70045A573 /* AccountsSummaryTableViewCell.swift */; };
+		E3FAE7C820CB21D70045A573 /* AccountsSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7C620CB21D70045A573 /* AccountsSummaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +34,6 @@
 /* Begin PBXFileReference section */
 		589A281C20CB1AC200858CCB /* SiriBanker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriBanker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		589A281F20CB1AC200858CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		589A282120CB1AC200858CCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		589A282420CB1AC200858CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		589A282620CB1AC400858CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		589A282920CB1AC400858CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,7 +46,8 @@
 		589A284620CB1FB100858CCB /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		589A284820CB1FBF00858CCB /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		589A284A20CB1FD600858CCB /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
-		589A284E20CB214C00858CCB /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		E3FAE7C520CB21D70045A573 /* AccountsSummaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountsSummaryTableViewCell.swift; path = SiriBanker/AccountsSummary/AccountsSummaryTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		E3FAE7C620CB21D70045A573 /* AccountsSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountsSummaryViewController.swift; path = SiriBanker/AccountsSummary/AccountsSummaryViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,11 +89,10 @@
 		589A281E20CB1AC200858CCB /* SiriBanker */ = {
 			isa = PBXGroup;
 			children = (
-				589A284D20CB213A00858CCB /* Utilities */,
 				589A284520CB1FA500858CCB /* Model */,
 				589A284020CB1F7F00858CCB /* Data */,
 				589A281F20CB1AC200858CCB /* AppDelegate.swift */,
-				589A282120CB1AC200858CCB /* ViewController.swift */,
+				E3FAE7C420CB20630045A573 /* AccountsSummary */,
 				589A282320CB1AC200858CCB /* Main.storyboard */,
 				589A282620CB1AC400858CCB /* Assets.xcassets */,
 				589A282820CB1AC400858CCB /* LaunchScreen.storyboard */,
@@ -130,13 +129,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		589A284D20CB213A00858CCB /* Utilities */ = {
+		E3FAE7C420CB20630045A573 /* AccountsSummary */ = {
 			isa = PBXGroup;
 			children = (
-				589A284E20CB214C00858CCB /* Formatter.swift */,
+				E3FAE7C520CB21D70045A573 /* AccountsSummaryTableViewCell.swift */,
+				E3FAE7C620CB21D70045A573 /* AccountsSummaryViewController.swift */,
 			);
-			path = Utilities;
-			sourceTree = "<group>";
+			path = AccountsSummary;
+			sourceTree = "<unknown>";
 		};
 /* End PBXGroup section */
 
@@ -261,12 +261,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				589A282220CB1AC200858CCB /* ViewController.swift in Sources */,
+				589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */,
 				589A284720CB1FB100858CCB /* Account.swift in Sources */,
 				589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */,
-				589A284F20CB214C00858CCB /* Formatter.swift in Sources */,
+				E3FAE7C820CB21D70045A573 /* AccountsSummaryViewController.swift in Sources */,
 				589A284B20CB1FD600858CCB /* Customer.swift in Sources */,
 				589A284420CB1F8D00858CCB /* DataLoader.swift in Sources */,
+				E3FAE7C720CB21D70045A573 /* AccountsSummaryTableViewCell.swift in Sources */,
 				589A284920CB1FBF00858CCB /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
