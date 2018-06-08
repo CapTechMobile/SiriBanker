@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         print(customer)
+        registerUserSpecificVocabulary()
         return true
     }
 
@@ -43,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func registerUserSpecificVocabulary() {
-        //        let accountNames = customer.accounts.map{$0.accountName}
-        //        INVocabulary.shared().setVocabularyStrings(<#T##vocabulary: NSOrderedSet##NSOrderedSet#>, of: .paymentsAccountNickname)
+        let accountNames = customer.accounts.map { $0.accountName }
+        INVocabulary.shared().setVocabularyStrings(NSOrderedSet(array: accountNames), of: .paymentsAccountNickname)
     }
 }

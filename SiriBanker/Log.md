@@ -9,3 +9,19 @@
 
 
 
+Intent defination file.
+
+four types:
+
+Confirmation: Response
+
+Success Response:  After the shortcut has run
+
+Info Response:  Train will be there in 4 minutes.
+
+Error Response:  Explain what went wrong.
+
+Custom responses work with Intent.
+
+
+

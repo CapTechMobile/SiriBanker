@@ -10,14 +10,12 @@ import UIKit
 
 class TransferTableViewController: UITableViewController {
 
-	@IBOutlet weak var toLabel: UILabel!
-	@IBOutlet weak var fromLabel: UILabel!
-	@IBOutlet weak var amountTextField: UITextField!
-	@IBOutlet weak var transferButton: UIButton!
-	
-	override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var toLabel: UILabel!
+    @IBOutlet weak var fromLabel: UILabel!
+    @IBOutlet weak var amountTextField: UITextField!
+    @IBOutlet weak var transferButton: UIButton!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
-	
 }
