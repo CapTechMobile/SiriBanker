@@ -13,6 +13,11 @@
 		589A282720CB1AC400858CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589A282620CB1AC400858CCB /* Assets.xcassets */; };
 		589A282A20CB1AC400858CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589A282820CB1AC400858CCB /* LaunchScreen.storyboard */; };
 		589A283520CB1AC400858CCB /* SiriBankerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A283420CB1AC400858CCB /* SiriBankerTests.swift */; };
+		589A284220CB1F7F00858CCB /* startupData.json in Resources */ = {isa = PBXBuildFile; fileRef = 589A284120CB1F7F00858CCB /* startupData.json */; };
+		589A284420CB1F8D00858CCB /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284320CB1F8D00858CCB /* DataLoader.swift */; };
+		589A284720CB1FB100858CCB /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284620CB1FB100858CCB /* Account.swift */; };
+		589A284920CB1FBF00858CCB /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284820CB1FBF00858CCB /* Transaction.swift */; };
+		589A284B20CB1FD600858CCB /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284A20CB1FD600858CCB /* Customer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		589A283020CB1AC400858CCB /* SiriBankerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiriBankerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		589A283420CB1AC400858CCB /* SiriBankerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriBankerTests.swift; sourceTree = "<group>"; };
 		589A283620CB1AC400858CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		589A284120CB1F7F00858CCB /* startupData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = startupData.json; sourceTree = "<group>"; };
+		589A284320CB1F8D00858CCB /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		589A284620CB1FB100858CCB /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		589A284820CB1FBF00858CCB /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		589A284A20CB1FD600858CCB /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,8 @@
 		589A281E20CB1AC200858CCB /* SiriBanker */ = {
 			isa = PBXGroup;
 			children = (
+				589A284520CB1FA500858CCB /* Model */,
+				589A284020CB1F7F00858CCB /* Data */,
 				589A281F20CB1AC200858CCB /* AppDelegate.swift */,
 				589A282120CB1AC200858CCB /* ViewController.swift */,
 				589A282320CB1AC200858CCB /* Main.storyboard */,
@@ -96,6 +108,25 @@
 			path = SiriBankerTests;
 			sourceTree = "<group>";
 		};
+		589A284020CB1F7F00858CCB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				589A284120CB1F7F00858CCB /* startupData.json */,
+				589A284320CB1F8D00858CCB /* DataLoader.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		589A284520CB1FA500858CCB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				589A284620CB1FB100858CCB /* Account.swift */,
+				589A284820CB1FBF00858CCB /* Transaction.swift */,
+				589A284A20CB1FD600858CCB /* Customer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +137,7 @@
 				589A281820CB1AC200858CCB /* Sources */,
 				589A281920CB1AC200858CCB /* Frameworks */,
 				589A281A20CB1AC200858CCB /* Resources */,
+				589A284C20CB201100858CCB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -178,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				589A282A20CB1AC400858CCB /* LaunchScreen.storyboard in Resources */,
+				589A284220CB1F7F00858CCB /* startupData.json in Resources */,
 				589A282720CB1AC400858CCB /* Assets.xcassets in Resources */,
 				589A282520CB1AC200858CCB /* Main.storyboard in Resources */,
 			);
@@ -192,13 +225,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		589A284C20CB201100858CCB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/swiftformat \"$(SRCROOT)\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		589A281820CB1AC200858CCB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				589A282220CB1AC200858CCB /* ViewController.swift in Sources */,
+				589A284720CB1FB100858CCB /* Account.swift in Sources */,
 				589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */,
+				589A284B20CB1FD600858CCB /* Customer.swift in Sources */,
+				589A284420CB1F8D00858CCB /* DataLoader.swift in Sources */,
+				589A284920CB1FBF00858CCB /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
