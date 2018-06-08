@@ -53,7 +53,7 @@
 		589A287520CB25FE00858CCB /* AccountsSummaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsSummaryTableViewCell.swift; sourceTree = "<group>"; };
 		589A287620CB25FE00858CCB /* AccountsSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsSummaryViewController.swift; sourceTree = "<group>"; };
 		E3FAE7CA20CB26A80045A573 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
-		E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionTableViewCell.swift; path = SiriBanker/AccountDetails/TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,6 @@
 		589A281320CB1AC200858CCB = {
 			isa = PBXGroup;
 			children = (
-				E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */,
 				589A281E20CB1AC200858CCB /* SiriBanker */,
 				589A283320CB1AC400858CCB /* SiriBankerTests */,
 				589A281D20CB1AC200858CCB /* Products */,
@@ -159,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				E3FAE7CA20CB26A80045A573 /* AccountDetailsViewController.swift */,
+				E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */,
 			);
 			path = AccountDetails;
 			sourceTree = "<group>";
