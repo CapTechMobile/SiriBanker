@@ -9,13 +9,15 @@
 import UIKit
 
 class AccountDetailsViewController: UIViewController {
-    @IBOutlet var topBackgroundView: UIView!
-    @IBOutlet var accountTypeLabel: UILabel!
-    @IBOutlet var accountNumberLabel: UILabel!
-    @IBOutlet var accountBalanceLabel: UILabel!
-    @IBOutlet var accountBalanceDescLabel: UILabel!
 
-    override func viewDidLoad() {
+    @IBOutlet weak var topBackgroundView: UIView!
+    @IBOutlet weak var accountTypeLabel: UILabel!
+    @IBOutlet weak var accountNumberLabel: UILabel!
+    @IBOutlet weak var accountBalanceLabel: UILabel!
+    @IBOutlet weak var accountBalanceDescLabel: UILabel!
+
+
+	override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
