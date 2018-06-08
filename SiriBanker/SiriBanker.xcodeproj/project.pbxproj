@@ -13,6 +13,7 @@
 		589A282A20CB1AC400858CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589A282820CB1AC400858CCB /* LaunchScreen.storyboard */; };
 		589A283520CB1AC400858CCB /* SiriBankerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A283420CB1AC400858CCB /* SiriBankerTests.swift */; };
 		E3FAE7C120CB1B8D0045A573 /* AccountsSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7C020CB1B8D0045A573 /* AccountsSummaryViewController.swift */; };
+		E3FAE7C320CB205B0045A573 /* AccountsSummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7C220CB205B0045A573 /* AccountsSummaryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		589A283420CB1AC400858CCB /* SiriBankerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriBankerTests.swift; sourceTree = "<group>"; };
 		589A283620CB1AC400858CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3FAE7C020CB1B8D0045A573 /* AccountsSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsSummaryViewController.swift; sourceTree = "<group>"; };
+		E3FAE7C220CB205B0045A573 /* AccountsSummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsSummaryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				589A281F20CB1AC200858CCB /* AppDelegate.swift */,
-				E3FAE7C020CB1B8D0045A573 /* AccountsSummaryViewController.swift */,
+				E3FAE7C420CB20630045A573 /* AccountsSummary */,
 				589A282320CB1AC200858CCB /* Main.storyboard */,
 				589A282620CB1AC400858CCB /* Assets.xcassets */,
 				589A282820CB1AC400858CCB /* LaunchScreen.storyboard */,
@@ -94,6 +96,15 @@
 				589A283620CB1AC400858CCB /* Info.plist */,
 			);
 			path = SiriBankerTests;
+			sourceTree = "<group>";
+		};
+		E3FAE7C420CB20630045A573 /* AccountsSummary */ = {
+			isa = PBXGroup;
+			children = (
+				E3FAE7C020CB1B8D0045A573 /* AccountsSummaryViewController.swift */,
+				E3FAE7C220CB205B0045A573 /* AccountsSummaryTableViewCell.swift */,
+			);
+			path = AccountsSummary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */,
+				E3FAE7C320CB205B0045A573 /* AccountsSummaryTableViewCell.swift in Sources */,
 				E3FAE7C120CB1B8D0045A573 /* AccountsSummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

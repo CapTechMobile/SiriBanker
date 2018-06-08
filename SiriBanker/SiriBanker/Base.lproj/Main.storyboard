@@ -86,6 +86,9 @@
                                                 <constraint firstItem="eyT-aN-Ssd" firstAttribute="leading" secondItem="GUT-H3-NSy" secondAttribute="leading" id="pz8-2R-phW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="qiA-81-4Nn" kind="show" id="I0J-rb-UIQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -111,13 +114,27 @@
                     <view key="view" contentMode="scaleToFill" id="YAk-Zk-fXI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2R-wn-DPt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="oad-gc-yox"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="v2R-wn-DPt" firstAttribute="leading" secondItem="TVl-U1-2a4" secondAttribute="leading" id="4BJ-dP-v7S"/>
+                            <constraint firstItem="TVl-U1-2a4" firstAttribute="trailing" secondItem="v2R-wn-DPt" secondAttribute="trailing" id="NJJ-Pt-04C"/>
+                            <constraint firstItem="v2R-wn-DPt" firstAttribute="top" secondItem="YAk-Zk-fXI" secondAttribute="top" id="qge-Uf-Kc8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TVl-U1-2a4"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wji-Od-6LV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="606" y="172"/>
+            <point key="canvasLocation" x="605.60000000000002" y="171.36431784107947"/>
         </scene>
     </scenes>
 </document>
