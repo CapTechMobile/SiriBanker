@@ -18,6 +18,7 @@
 		589A284720CB1FB100858CCB /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284620CB1FB100858CCB /* Account.swift */; };
 		589A284920CB1FBF00858CCB /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284820CB1FBF00858CCB /* Transaction.swift */; };
 		589A284B20CB1FD600858CCB /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284A20CB1FD600858CCB /* Customer.swift */; };
+		589A284F20CB214C00858CCB /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284E20CB214C00858CCB /* Formatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		589A284620CB1FB100858CCB /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		589A284820CB1FBF00858CCB /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		589A284A20CB1FD600858CCB /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		589A284E20CB214C00858CCB /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		589A281E20CB1AC200858CCB /* SiriBanker */ = {
 			isa = PBXGroup;
 			children = (
+				589A284D20CB213A00858CCB /* Utilities */,
 				589A284520CB1FA500858CCB /* Model */,
 				589A284020CB1F7F00858CCB /* Data */,
 				589A281F20CB1AC200858CCB /* AppDelegate.swift */,
@@ -125,6 +128,14 @@
 				589A284A20CB1FD600858CCB /* Customer.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		589A284D20CB213A00858CCB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				589A284E20CB214C00858CCB /* Formatter.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +264,7 @@
 				589A282220CB1AC200858CCB /* ViewController.swift in Sources */,
 				589A284720CB1FB100858CCB /* Account.swift in Sources */,
 				589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */,
+				589A284F20CB214C00858CCB /* Formatter.swift in Sources */,
 				589A284B20CB1FD600858CCB /* Customer.swift in Sources */,
 				589A284420CB1F8D00858CCB /* DataLoader.swift in Sources */,
 				589A284920CB1FBF00858CCB /* Transaction.swift in Sources */,

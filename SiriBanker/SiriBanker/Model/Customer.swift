@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct Customer: Decodable {
+    
+
+
+}
