@@ -50,6 +50,7 @@
 		589A287220CB25F100858CCB /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		589A287520CB25FE00858CCB /* AccountsSummaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsSummaryTableViewCell.swift; sourceTree = "<group>"; };
 		589A287620CB25FE00858CCB /* AccountsSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsSummaryViewController.swift; sourceTree = "<group>"; };
+		589A287920CB2D8500858CCB /* Log.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Log.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +74,7 @@
 		589A281320CB1AC200858CCB = {
 			isa = PBXGroup;
 			children = (
+				589A287920CB2D8500858CCB /* Log.md */,
 				589A281E20CB1AC200858CCB /* SiriBanker */,
 				589A283320CB1AC400858CCB /* SiriBankerTests */,
 				589A281D20CB1AC200858CCB /* Products */,
