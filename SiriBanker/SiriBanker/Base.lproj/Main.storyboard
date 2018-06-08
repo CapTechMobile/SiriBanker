@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="AccountTableViewCell" rowHeight="121" id="cl5-WI-WUc" customClass="AccountsSummaryTableViewCell" customModule="SiriBanker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="AccountsSummaryTableViewCell" rowHeight="121" id="cl5-WI-WUc" customClass="AccountsSummaryTableViewCell" customModule="SiriBanker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cl5-WI-WUc" id="GUT-H3-NSy">
@@ -109,6 +109,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="6Iq-Mk-omL"/>
+                    <connections>
+                        <outlet property="tableView" destination="TQS-As-TaQ" id="Na6-YZ-U6n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -516,7 +519,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ylk-EX-6X5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-286" y="551"/>
+            <point key="canvasLocation" x="-105" y="526"/>
         </scene>
         <!--Transfers-->
         <scene sceneID="JjC-Jw-xe6">

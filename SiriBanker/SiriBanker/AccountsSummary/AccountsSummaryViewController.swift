@@ -9,20 +9,34 @@
 import UIKit
 
 class AccountsSummaryViewController: UIViewController {
+    @IBOutlet var tableView: UITableView!
+    fileprivate let cellIdentifier = "AccountsSummaryTableViewCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+}
+
+extension AccountsSummaryViewController: UITableViewDataSource {
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        return customer.accounts.count
     }
 
-    /*
-     // MARK: - Navigation
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? AccountsSummaryTableViewCell else {
+            return UITableViewCell()
+        }
+        let account = customer.accounts[indexPath.row]
+        cell.accountTypeLabel.text = account.accountType.rawValue
+        cell.accountNumberLabel.text = account.accountName
+        cell.accountBalanceLabel.text = "$\(account.statementBalance)"
+        cell.accountBalanceDescriptionLabel.text = "available balance"
+        return cell
+    }
+}
 
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+extension AccountsSummaryViewController: UITableViewDelegate {
 }
