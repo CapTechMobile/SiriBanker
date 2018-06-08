@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A281F20CB1AC200858CCB /* AppDelegate.swift */; };
-		589A282220CB1AC200858CCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A282120CB1AC200858CCB /* ViewController.swift */; };
 		589A282520CB1AC200858CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589A282320CB1AC200858CCB /* Main.storyboard */; };
 		589A282720CB1AC400858CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589A282620CB1AC400858CCB /* Assets.xcassets */; };
 		589A282A20CB1AC400858CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589A282820CB1AC400858CCB /* LaunchScreen.storyboard */; };
 		589A283520CB1AC400858CCB /* SiriBankerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A283420CB1AC400858CCB /* SiriBankerTests.swift */; };
+		E3FAE7C120CB1B8D0045A573 /* AccountsSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7C020CB1B8D0045A573 /* AccountsSummaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,6 @@
 /* Begin PBXFileReference section */
 		589A281C20CB1AC200858CCB /* SiriBanker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriBanker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		589A281F20CB1AC200858CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		589A282120CB1AC200858CCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		589A282420CB1AC200858CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		589A282620CB1AC400858CCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		589A282920CB1AC400858CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		589A283020CB1AC400858CCB /* SiriBankerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiriBankerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		589A283420CB1AC400858CCB /* SiriBankerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriBankerTests.swift; sourceTree = "<group>"; };
 		589A283620CB1AC400858CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3FAE7C020CB1B8D0045A573 /* AccountsSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsSummaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				589A281F20CB1AC200858CCB /* AppDelegate.swift */,
-				589A282120CB1AC200858CCB /* ViewController.swift */,
+				E3FAE7C020CB1B8D0045A573 /* AccountsSummaryViewController.swift */,
 				589A282320CB1AC200858CCB /* Main.storyboard */,
 				589A282620CB1AC400858CCB /* Assets.xcassets */,
 				589A282820CB1AC400858CCB /* LaunchScreen.storyboard */,
@@ -197,8 +197,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				589A282220CB1AC200858CCB /* ViewController.swift in Sources */,
 				589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */,
+				E3FAE7C120CB1B8D0045A573 /* AccountsSummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
