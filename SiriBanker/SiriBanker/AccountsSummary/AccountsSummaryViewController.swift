@@ -17,6 +17,8 @@ class AccountsSummaryViewController: UIViewController {
 
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = 121
+        tableView.tableFooterView = UIView()
     }
 }
 

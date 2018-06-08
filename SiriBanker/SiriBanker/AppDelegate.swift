@@ -6,8 +6,8 @@
 //  Copyright © 2018 LBrands. All rights reserved.
 //
 
-import UIKit
 import Intents
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        print(customer)
+//        print(customer)
         return true
     }
 

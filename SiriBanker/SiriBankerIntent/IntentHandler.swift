@@ -18,7 +18,6 @@ import Intents
 // "Search for messages in <myApp>"
 
 class IntentHandler: INExtension, INSendMessageIntentHandling, INSearchForMessagesIntentHandling, INSetMessageAttributeIntentHandling {
-
     override func handler(for _: INIntent) -> Any {
         // This is the default implementation.  If you want different objects to handle different intents,
         // you can override this and return the handler you want for that particular intent.
@@ -31,7 +30,6 @@ class IntentHandler: INExtension, INSendMessageIntentHandling, INSearchForMessag
     // Implement resolution methods to provide additional information about your intent (optional).
     func resolveRecipients(for intent: INSendMessageIntent, with completion: @escaping ([INPersonResolutionResult]) -> Void) {
         if let recipients = intent.recipients {
-
             // If no recipients were provided we'll need to prompt for a value.
             if recipients.count == 0 {
                 completion([INPersonResolutionResult.needsValue()])

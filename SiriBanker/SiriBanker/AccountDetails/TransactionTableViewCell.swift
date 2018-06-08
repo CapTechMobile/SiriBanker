@@ -9,9 +9,9 @@
 import UIKit
 
 class TransactionTableViewCell: UITableViewCell {
-    @IBOutlet weak var memoLabel: UILabel!
-    @IBOutlet weak var amountLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet var memoLabel: UILabel!
+    @IBOutlet var amountLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
