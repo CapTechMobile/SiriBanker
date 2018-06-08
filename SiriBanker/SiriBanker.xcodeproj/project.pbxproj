@@ -12,13 +12,13 @@
 		589A282720CB1AC400858CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589A282620CB1AC400858CCB /* Assets.xcassets */; };
 		589A282A20CB1AC400858CCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589A282820CB1AC400858CCB /* LaunchScreen.storyboard */; };
 		589A283520CB1AC400858CCB /* SiriBankerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A283420CB1AC400858CCB /* SiriBankerTests.swift */; };
-		E3FAE7C120CB1B8D0045A573 /* AccountsSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7C020CB1B8D0045A573 /* AccountsSummaryViewController.swift */; };
-		E3FAE7C320CB205B0045A573 /* AccountsSummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7C220CB205B0045A573 /* AccountsSummaryTableViewCell.swift */; };
 		589A284220CB1F7F00858CCB /* startupData.json in Resources */ = {isa = PBXBuildFile; fileRef = 589A284120CB1F7F00858CCB /* startupData.json */; };
 		589A284420CB1F8D00858CCB /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284320CB1F8D00858CCB /* DataLoader.swift */; };
 		589A284720CB1FB100858CCB /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284620CB1FB100858CCB /* Account.swift */; };
 		589A284920CB1FBF00858CCB /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284820CB1FBF00858CCB /* Transaction.swift */; };
 		589A284B20CB1FD600858CCB /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284A20CB1FD600858CCB /* Customer.swift */; };
+		E3FAE7C720CB21D70045A573 /* AccountsSummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7C520CB21D70045A573 /* AccountsSummaryTableViewCell.swift */; };
+		E3FAE7C820CB21D70045A573 /* AccountsSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7C620CB21D70045A573 /* AccountsSummaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +41,13 @@
 		589A283020CB1AC400858CCB /* SiriBankerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiriBankerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		589A283420CB1AC400858CCB /* SiriBankerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriBankerTests.swift; sourceTree = "<group>"; };
 		589A283620CB1AC400858CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3FAE7C020CB1B8D0045A573 /* AccountsSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsSummaryViewController.swift; sourceTree = "<group>"; };
-		E3FAE7C220CB205B0045A573 /* AccountsSummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsSummaryTableViewCell.swift; sourceTree = "<group>"; };
 		589A284120CB1F7F00858CCB /* startupData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = startupData.json; sourceTree = "<group>"; };
 		589A284320CB1F8D00858CCB /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		589A284620CB1FB100858CCB /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		589A284820CB1FBF00858CCB /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		589A284A20CB1FD600858CCB /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		E3FAE7C520CB21D70045A573 /* AccountsSummaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountsSummaryTableViewCell.swift; path = SiriBanker/AccountsSummary/AccountsSummaryTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		E3FAE7C620CB21D70045A573 /* AccountsSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountsSummaryViewController.swift; path = SiriBanker/AccountsSummary/AccountsSummaryViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,15 +110,6 @@
 			path = SiriBankerTests;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-		E3FAE7C420CB20630045A573 /* AccountsSummary */ = {
-			isa = PBXGroup;
-			children = (
-				E3FAE7C020CB1B8D0045A573 /* AccountsSummaryViewController.swift */,
-				E3FAE7C220CB205B0045A573 /* AccountsSummaryTableViewCell.swift */,
-			);
-			path = AccountsSummary;
-=======
 		589A284020CB1F7F00858CCB /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,8 +127,16 @@
 				589A284A20CB1FD600858CCB /* Customer.swift */,
 			);
 			path = Model;
->>>>>>> aa69561eb67cc96ca0ffaf6972a092b755de96ad
 			sourceTree = "<group>";
+		};
+		E3FAE7C420CB20630045A573 /* AccountsSummary */ = {
+			isa = PBXGroup;
+			children = (
+				E3FAE7C520CB21D70045A573 /* AccountsSummaryTableViewCell.swift */,
+				E3FAE7C620CB21D70045A573 /* AccountsSummaryViewController.swift */,
+			);
+			path = AccountsSummary;
+			sourceTree = "<unknown>";
 		};
 /* End PBXGroup section */
 
@@ -262,18 +261,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */,
-				E3FAE7C320CB205B0045A573 /* AccountsSummaryTableViewCell.swift in Sources */,
-				E3FAE7C120CB1B8D0045A573 /* AccountsSummaryViewController.swift in Sources */,
-=======
-				589A282220CB1AC200858CCB /* ViewController.swift in Sources */,
 				589A284720CB1FB100858CCB /* Account.swift in Sources */,
 				589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */,
+				E3FAE7C820CB21D70045A573 /* AccountsSummaryViewController.swift in Sources */,
 				589A284B20CB1FD600858CCB /* Customer.swift in Sources */,
 				589A284420CB1F8D00858CCB /* DataLoader.swift in Sources */,
+				E3FAE7C720CB21D70045A573 /* AccountsSummaryTableViewCell.swift in Sources */,
 				589A284920CB1FBF00858CCB /* Transaction.swift in Sources */,
->>>>>>> aa69561eb67cc96ca0ffaf6972a092b755de96ad
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
