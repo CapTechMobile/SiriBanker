@@ -14,13 +14,13 @@ enum AccountType: String {
 }
 
 struct Account: Decodable {
-    let acountName: String
+    let accountName: String
     let accountType: AccountType
     let statementBalance: Double
     let transactions: [Transaction]
 
     enum CodingKeys: String, CodingKey {
-        case acountName
+        case accountName
         case accountType
         case statementBalance
         case transactions
@@ -28,7 +28,7 @@ struct Account: Decodable {
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self) // defining our (keyed) container
-        acountName = try container.decode(String.self, forKey: .acountName) // extracting the data
+        accountName = try container.decode(String.self, forKey: .accountName) // extracting the data
         let accountTypeString = try container.decode(String.self, forKey: CodingKeys.accountType)
         accountType = AccountType(rawValue: accountTypeString)!
         statementBalance = try container.decode(Double.self, forKey: .statementBalance)
