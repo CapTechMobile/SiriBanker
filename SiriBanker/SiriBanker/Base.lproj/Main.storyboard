@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountTableViewCell" rowHeight="121" id="cl5-WI-WUc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountTableViewCell" rowHeight="121" id="cl5-WI-WUc" customClass="AccountsSummaryTableViewCell" customModule="SiriBanker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cl5-WI-WUc" id="GUT-H3-NSy">
@@ -87,6 +87,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="accountBalanceDescriptionLabel" destination="2fU-Tu-s9j" id="M7Z-jL-9v6"/>
+                                            <outlet property="accountBalanceLabel" destination="E2R-jZ-5Or" id="qQd-Jm-9BG"/>
+                                            <outlet property="accountNumberLabel" destination="56u-gL-uVB" id="6Mx-G0-vOE"/>
+                                            <outlet property="accountTypeLabel" destination="j25-5N-hVa" id="Ptc-cX-9mZ"/>
+                                            <outlet property="backgroundView" destination="eyT-aN-Ssd" id="DGw-QU-Cb1"/>
+                                            <outlet property="gradientView" destination="eyT-aN-Ssd" id="jnh-Js-cm9"/>
                                             <segue destination="qiA-81-4Nn" kind="show" id="I0J-rb-UIQ"/>
                                         </connections>
                                     </tableViewCell>
