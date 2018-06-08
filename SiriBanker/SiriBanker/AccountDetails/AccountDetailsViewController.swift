@@ -9,26 +9,38 @@
 import UIKit
 
 class AccountDetailsViewController: UIViewController {
+    @IBOutlet var topBackgroundView: UIView!
+    @IBOutlet var accountTypeLabel: UILabel!
+    @IBOutlet var accountNumberLabel: UILabel!
+    @IBOutlet var accountBalanceLabel: UILabel!
+    @IBOutlet var accountBalanceDescLabel: UILabel!
+    @IBOutlet var tableView: UITableView!
 
-    @IBOutlet weak var topBackgroundView: UIView!
-    @IBOutlet weak var accountTypeLabel: UILabel!
-    @IBOutlet weak var accountNumberLabel: UILabel!
-    @IBOutlet weak var accountBalanceLabel: UILabel!
-    @IBOutlet weak var accountBalanceDescLabel: UILabel!
+    var account: Account?
+    fileprivate let cellIdentifier = "TransactionTableViewCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension AccountDetailsViewController: UITableViewDelegate {
+}
+
+extension AccountDetailsViewController: UITableViewDataSource {
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        return account?.transactions.count ?? 0
     }
 
-    /*
-     // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TransactionTableViewCell, let transaction = account?.transactions[indexPath.row] else {
+            return UITableViewCell()
+        }
+        cell.amountLabel.text = "$\(transaction.amount)"
+        cell.dateLabel.text = "\(transaction.date)"
+        cell.memoLabel.text = transaction.memo
+        return cell
+    }
 }

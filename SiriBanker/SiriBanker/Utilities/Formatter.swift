@@ -9,7 +9,6 @@
 import Foundation
 
 class DateFormatters {
-
     static var networkDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -17,7 +16,6 @@ class DateFormatters {
     }()
 
     static var timeFormatter: DateFormatter = {
-
         let formatter = DateFormatter()
         formatter.dateFormat = "h:mm a"
         return formatter

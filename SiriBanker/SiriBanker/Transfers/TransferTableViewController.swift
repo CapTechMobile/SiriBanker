@@ -9,7 +9,6 @@
 import UIKit
 
 class TransferTableViewController: UITableViewController {
-
     @IBOutlet weak var toLabel: UILabel!
     @IBOutlet weak var fromLabel: UILabel!
     @IBOutlet weak var amountTextField: UITextField!
