@@ -42,6 +42,9 @@
 		58F9F70120CB4FF5003C520B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284820CB1FBF00858CCB /* Transaction.swift */; };
 		58F9F70220CB4FF5003C520B /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284A20CB1FD600858CCB /* Customer.swift */; };
 		58F9F70320CB5014003C520B /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A287220CB25F100858CCB /* Formatter.swift */; };
+		E334DBB620CC4EE9006862F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E334DBB520CC4EE9006862F8 /* Localizable.strings */; };
+		E334DBB820CC4F86006862F8 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E334DBB720CC4F86006862F8 /* Bundle+Extension.swift */; };
+		E3990CF020CC4ACA00621F28 /* NSUserActivity+IntentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3990CEF20CC4ACA00621F28 /* NSUserActivity+IntentData.swift */; };
 		E3FAE7CB20CB26A80045A573 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7CA20CB26A80045A573 /* AccountDetailsViewController.swift */; };
 		E3FAE7CD20CB2A930045A573 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */; };
 		E3FAE7D220CB37940045A573 /* TransferTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7D120CB37940045A573 /* TransferTableViewController.swift */; };
@@ -162,6 +165,9 @@
 		58F9F6E820CB4F87003C520B /* SiriBankerKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiriBankerKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F9F6EF20CB4F87003C520B /* SiriBankerKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriBankerKitTests.swift; sourceTree = "<group>"; };
 		58F9F6F120CB4F87003C520B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E334DBB520CC4EE9006862F8 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E334DBB720CC4F86006862F8 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		E3990CEF20CC4ACA00621F28 /* NSUserActivity+IntentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUserActivity+IntentData.swift"; sourceTree = "<group>"; };
 		E3FAE7CA20CB26A80045A573 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 		E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		E3FAE7D120CB37940045A573 /* TransferTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTableViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				5860EC1120CC4AA00023ECCC /* Intents.intentdefinition */,
+				E3990CF120CC4AD500621F28 /* Support */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -267,8 +274,8 @@
 		589A281E20CB1AC200858CCB /* SiriBanker */ = {
 			isa = PBXGroup;
 			children = (
-				5860EC0A20CC30E50023ECCC /* ViewUtilities */,
 				589A287C20CB2E7F00858CCB /* SiriBanker.entitlements */,
+				5860EC0A20CC30E50023ECCC /* ViewUtilities */,
 				589A287420CB25FE00858CCB /* AccountsSummary */,
 				E3FAE7C920CB268B0045A573 /* AccountDetails */,
 				E3FAE7D020CB35F00045A573 /* Transfers */,
@@ -378,6 +385,17 @@
 				58F9F6F120CB4F87003C520B /* Info.plist */,
 			);
 			path = SiriBankerKitTests;
+			sourceTree = "<group>";
+		};
+		E3990CF120CC4AD500621F28 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E3990CEF20CC4ACA00621F28 /* NSUserActivity+IntentData.swift */,
+				E334DBB520CC4EE9006862F8 /* Localizable.strings */,
+				E334DBB720CC4F86006862F8 /* Bundle+Extension.swift */,
+			);
+			name = Support;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		E3FAE7C920CB268B0045A573 /* AccountDetails */ = {
@@ -590,6 +608,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				589A287B20CB2DE700858CCB /* Log.md in Resources */,
+				E334DBB620CC4EE9006862F8 /* Localizable.strings in Resources */,
 				589A282A20CB1AC400858CCB /* LaunchScreen.storyboard in Resources */,
 				5860EC0E20CC33CC0023ECCC /* README.md in Resources */,
 				589A282720CB1AC400858CCB /* Assets.xcassets in Resources */,
@@ -665,8 +684,10 @@
 				E3FAE7CD20CB2A930045A573 /* TransactionTableViewCell.swift in Sources */,
 				589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */,
 				E3FAE7D220CB37940045A573 /* TransferTableViewController.swift in Sources */,
+				E3990CF020CC4ACA00621F28 /* NSUserActivity+IntentData.swift in Sources */,
 				E3FAE7CB20CB26A80045A573 /* AccountDetailsViewController.swift in Sources */,
 				E3FAE7D920CC03140045A573 /* SelectAccountTableViewController.swift in Sources */,
+				E334DBB820CC4F86006862F8 /* Bundle+Extension.swift in Sources */,
 				589A287820CB25FE00858CCB /* AccountsSummaryViewController.swift in Sources */,
 				589A287720CB25FE00858CCB /* AccountsSummaryTableViewCell.swift in Sources */,
 				5860EC1320CC4AA30023ECCC /* Intents.intentdefinition in Sources */,
