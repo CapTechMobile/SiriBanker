@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		5860EC0C20CC31080023ECCC /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860EC0B20CC31080023ECCC /* AlertManager.swift */; };
 		5860EC0E20CC33CC0023ECCC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5860EC0D20CC33CC0023ECCC /* README.md */; };
+		5860EC1220CC4AA00023ECCC /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5860EC1120CC4AA00023ECCC /* Intents.intentdefinition */; };
+		5860EC1320CC4AA30023ECCC /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5860EC1120CC4AA00023ECCC /* Intents.intentdefinition */; };
+		5860EC1520CC4AA50023ECCC /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5860EC1120CC4AA00023ECCC /* Intents.intentdefinition */; };
+		5860EC1620CC4AA60023ECCC /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5860EC1120CC4AA00023ECCC /* Intents.intentdefinition */; };
 		589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A281F20CB1AC200858CCB /* AppDelegate.swift */; };
 		589A282520CB1AC200858CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589A282320CB1AC200858CCB /* Main.storyboard */; };
 		589A282720CB1AC400858CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589A282620CB1AC400858CCB /* Assets.xcassets */; };
@@ -117,6 +121,8 @@
 /* Begin PBXFileReference section */
 		5860EC0B20CC31080023ECCC /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		5860EC0D20CC33CC0023ECCC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5860EC0F20CC49560023ECCC /* SiriBankerIntent.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = SiriBankerIntent.entitlements; sourceTree = "<group>"; };
+		5860EC1120CC4AA00023ECCC /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		589A281C20CB1AC200858CCB /* SiriBanker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriBanker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		589A281F20CB1AC200858CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		589A282420CB1AC200858CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -218,9 +224,18 @@
 			path = ViewUtilities;
 			sourceTree = "<group>";
 		};
+		5860EC1020CC4A810023ECCC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5860EC1120CC4AA00023ECCC /* Intents.intentdefinition */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		589A281320CB1AC200858CCB = {
 			isa = PBXGroup;
 			children = (
+				5860EC1020CC4A810023ECCC /* Shared */,
 				5860EC0D20CC33CC0023ECCC /* README.md */,
 				589A287A20CB2DE700858CCB /* Log.md */,
 				589A281E20CB1AC200858CCB /* SiriBanker */,
@@ -315,6 +330,7 @@
 		589A288220CB2EFD00858CCB /* SiriBankerIntent */ = {
 			isa = PBXGroup;
 			children = (
+				5860EC0F20CC49560023ECCC /* SiriBankerIntent.entitlements */,
 				589A288320CB2EFD00858CCB /* IntentHandler.swift */,
 				589A288520CB2EFD00858CCB /* Info.plist */,
 			);
@@ -650,6 +666,7 @@
 				E3FAE7D920CC03140045A573 /* SelectAccountTableViewController.swift in Sources */,
 				589A287820CB25FE00858CCB /* AccountsSummaryViewController.swift in Sources */,
 				589A287720CB25FE00858CCB /* AccountsSummaryTableViewCell.swift in Sources */,
+				5860EC1320CC4AA30023ECCC /* Intents.intentdefinition in Sources */,
 				5860EC0C20CC31080023ECCC /* AlertManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -666,6 +683,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5860EC1220CC4AA00023ECCC /* Intents.intentdefinition in Sources */,
 				589A288420CB2EFD00858CCB /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,6 +692,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5860EC1520CC4AA50023ECCC /* Intents.intentdefinition in Sources */,
 				589A289020CB2EFD00858CCB /* IntentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,6 +707,7 @@
 				58C1ACB420CC249800240C3D /* TransactionManager.swift in Sources */,
 				58F9F70120CB4FF5003C520B /* Transaction.swift in Sources */,
 				58F9F70220CB4FF5003C520B /* Customer.swift in Sources */,
+				5860EC1620CC4AA60023ECCC /* Intents.intentdefinition in Sources */,
 				58C1ACB120CC0B8D00240C3D /* CustomerFileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -890,7 +910,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.captech.siribanker.SiriBanker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.captech.siribanker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -910,7 +930,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.captech.siribanker.SiriBanker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.captech.siribanker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -970,7 +990,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.captech.siribanker.SiriBanker.SiriBankerIntentUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.captech.siribanker.SiriBankerIntentUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -989,7 +1009,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.captech.siribanker.SiriBanker.SiriBankerIntentUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.captech.siribanker.SiriBankerIntentUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -1000,6 +1020,7 @@
 		589A289F20CB2EFD00858CCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SiriBanker/SiriBankerIntent/SiriBankerIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Q4M6DQ9WM;
 				INFOPLIST_FILE = SiriBankerIntent/Info.plist;
@@ -1008,7 +1029,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.captech.siribanker.SiriBanker.SiriBankerIntent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.captech.siribanker.SiriBankerIntent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -1019,6 +1040,7 @@
 		589A28A020CB2EFD00858CCB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SiriBanker/SiriBankerIntent/SiriBankerIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Q4M6DQ9WM;
 				INFOPLIST_FILE = SiriBankerIntent/Info.plist;
@@ -1027,7 +1049,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.captech.siribanker.SiriBanker.SiriBankerIntent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.captech.siribanker.SiriBankerIntent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
