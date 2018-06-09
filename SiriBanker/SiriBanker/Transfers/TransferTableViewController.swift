@@ -33,7 +33,7 @@ class TransferTableViewController: UITableViewController {
     }
 
     @IBAction func transferButtonTapped(_: Any) {
-        let response = transactionManager.sendTransaction()
+		let response = transactionManager.sendTransaction()
         AlertManager.showAlert(response.alertObj, on: self)
         clearView()
     }

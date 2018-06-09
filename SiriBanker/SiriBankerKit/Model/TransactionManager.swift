@@ -21,6 +21,13 @@ public class TransactionManager {
     }
 
     public func sendTransaction() -> TransationCreationStatus {
+		guard var customer = customer, let toAcct = toAccount, let fromAcct = fromAccount, let amount = amount else {
+			return .failure(.invalidData)
+		}
+		let fromTransaction = Transaction(amount: -amount)
+		let toTransaction = Transaction(amount: amount)
+		customer.accounts.first(where: { $0 == toAcct })?.transactions.append(toTransaction)
+		customer.accounts.first(where: { $0 == fromAcct })?.transactions.append(fromTransaction)
         clearTransaction()
         return .success
     }

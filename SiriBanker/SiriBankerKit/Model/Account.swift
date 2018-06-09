@@ -27,7 +27,7 @@ public struct Account: Decodable, Equatable {
         return transactions.reduce(0, { $0 + $1.amount })
     }
 
-    public let transactions: [Transaction]
+    public var transactions: [Transaction]
     public var transactionsSorted: [Transaction] {
         var transactions = self.transactions
         transactions.sort(by: { $0.date > $1.date })

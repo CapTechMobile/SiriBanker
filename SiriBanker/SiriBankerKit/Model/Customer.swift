@@ -22,7 +22,7 @@ private class TestClass {
 public struct Customer: Decodable {
     public let customerName: String
     public let customerId: String
-    public let accounts: [Account]
+    public var accounts: [Account]
 
     static func defaultCustomer() -> Customer {
         return Customer(customerName: "", customerId: "", accounts: [Account]())
