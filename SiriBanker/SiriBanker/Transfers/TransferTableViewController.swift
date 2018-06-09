@@ -23,7 +23,7 @@ class TransferTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-		transactionManager.currentCustomer = customer
+        transactionManager.currentCustomer = customer
         if let toAccount = TransactionManager.shared.toAccount {
             toLabel.text = "To: \(toAccount.accountName)"
         }
