@@ -8,7 +8,7 @@
 
 import Foundation
 
-public var customer: Customer?
+public var customer: Customer = Customer.defaultCustomer()
 
 enum JSONError: Error {
     case missingFile
@@ -25,11 +25,6 @@ public struct Customer: Decodable {
     public let accounts: [Account]
 
     static func defaultCustomer() -> Customer {
-        let bundle = Bundle(for: TestClass.self)
-        let path = bundle.path(forResource: "startupData", ofType: "json")!
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-        let decoder = JSONDecoder()
-        let customer = try! decoder.decode(Customer.self, from: data)
-        return customer
+        return Customer(customerName: "", customerId: "", accounts: [Account]())
     }
 }

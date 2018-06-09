@@ -21,7 +21,7 @@ class TransferTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        guard let customer = customer else { return }
+        //   guard let customer = customer else { return }
         //        if let toAccount = customer.toAccount {
         //            toLabel.text = "To: \(toAccount.accountName)"
         //        }

@@ -44,7 +44,7 @@ class SelectAccountTableViewController: UITableViewController {
 
     override func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         let account = dataSource[indexPath.row]
-        guard var customer = customer else { return }
+
         if isSelectingToAccount {
             TransactionManager.shared.toAccount = account
         } else {
