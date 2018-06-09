@@ -36,11 +36,10 @@ class AccountDetailsViewController: UIViewController {
         accountBalanceLabel.text = Formatters.formatAsCurrency(double: account.statementBalance)
         accountBalanceLabel.textColor = account.statementBalance.expressiveColor
         accountBalanceDescLabel.text = "available balance"
-		donateActivity()
+		donateActivity(accountName: account.accountName)
     }
 	
-	fileprivate func donateActivity() {
-		guard let accountName = account?.accountName else { return }
+	fileprivate func donateActivity(accountName: String) {
 		self.userActivity = NSUserActivity.viewAccountActivity(accountName: accountName)
 	}
 }
