@@ -31,6 +31,7 @@ class AccountsSummaryTableViewCell: UITableViewCell {
         accountTypeLabel.text = account.accountType.rawValue
         accountNumberLabel.text = account.accountName
         accountBalanceLabel.text = currencyFormatter.string(from: NSNumber(value: account.statementBalance))
+        accountBalanceLabel.textColor = account.statementBalance.expressiveColor
         accountBalanceDescriptionLabel.text = "available balance"
     }
 }

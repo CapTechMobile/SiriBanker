@@ -6,6 +6,7 @@
 //  Copyright © 2018 LBrands. All rights reserved.
 //
 
+import SiriBankerKit
 import UIKit
 
 class TransactionTableViewCell: UITableViewCell {
@@ -22,5 +23,13 @@ class TransactionTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+
+    func configure(with transaction: Transaction) {
+        amountLabel.text = Formatters.formatAsCurrency(double: transaction.amount)
+        amountLabel.textColor = transaction.amount.expressiveColor
+        let prettyDate = Formatters.networkDateFormatter.string(from: transaction.date)
+        dateLabel.text = "\(prettyDate)"
+        memoLabel.text = transaction.memo
     }
 }

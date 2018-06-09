@@ -48,3 +48,9 @@ public struct Account: Decodable, Equatable {
         transactions = try container.decode([Transaction].self, forKey: .transactions)
     }
 }
+
+public extension Double {
+    public var expressiveColor: UIColor {
+        return self < 0 ? UIColor.red : UIColor.green
+    }
+}
