@@ -18,12 +18,12 @@ class TransferTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        transactionManager.currentCustomer = customer
         tableView.tableFooterView = UIView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+		transactionManager.currentCustomer = customer
         if let toAccount = TransactionManager.shared.toAccount {
             toLabel.text = "To: \(toAccount.accountName)"
         }

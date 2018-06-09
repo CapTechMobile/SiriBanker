@@ -51,13 +51,11 @@ public class TransactionManager {
         } catch {
             return .failure(.insufficientFunds)
         }
-
         clearTransaction()
         return .success
     }
 
     public func clearTransaction() {
-        currentCustomer = nil
         toAccount = nil
         fromAccount = nil
         amount = nil
