@@ -49,5 +49,6 @@ class SelectAccountTableViewController: UITableViewController {
         } else {
             customer.fromAccount = account
         }
+        navigationController?.popViewController(animated: true)
     }
 }

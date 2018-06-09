@@ -305,9 +305,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <connections>
-                                            <segue destination="BMo-Cs-uPl" kind="show" id="jqa-tS-zoZ"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="90" id="tja-B7-i2X">
                                         <rect key="frame" x="0.0" y="90" width="375" height="90"/>
@@ -334,9 +331,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <connections>
-                                            <segue destination="BMo-Cs-uPl" kind="show" id="MaL-P4-cZj"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="F6Q-zx-aVt">
                                         <rect key="frame" x="0.0" y="180" width="375" height="90"/>
@@ -412,10 +406,10 @@
             </objects>
             <point key="canvasLocation" x="1542" y="902"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Select Account Table View Controller-->
         <scene sceneID="9z3-3D-kHU">
             <objects>
-                <tableViewController id="BMo-Cs-uPl" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SelectAccountTableViewController" id="BMo-Cs-uPl" customClass="SelectAccountTableViewController" customModule="SiriBanker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yke-EU-Spb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -540,7 +534,4 @@
             <point key="canvasLocation" x="841" y="902"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="jqa-tS-zoZ"/>
-    </inferredMetricsTieBreakers>
 </document>
