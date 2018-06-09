@@ -23,6 +23,7 @@
 		589A289A20CB2EFD00858CCB /* SiriBankerIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 589A288120CB2EFD00858CCB /* SiriBankerIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		589A28A320CB391D00858CCB /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589A28A220CB391D00858CCB /* Intents.framework */; };
 		58C1ACB120CC0B8D00240C3D /* CustomerFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C1ACB020CC0B8D00240C3D /* CustomerFileManager.swift */; };
+		58C1ACB420CC249800240C3D /* TransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C1ACB320CC249800240C3D /* TransactionManager.swift */; };
 		58F9F6E920CB4F87003C520B /* SiriBankerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F9F6E020CB4F87003C520B /* SiriBankerKit.framework */; };
 		58F9F6F020CB4F87003C520B /* SiriBankerKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F9F6EF20CB4F87003C520B /* SiriBankerKitTests.swift */; };
 		58F9F6F220CB4F87003C520B /* SiriBankerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 58F9F6E220CB4F87003C520B /* SiriBankerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -142,6 +143,7 @@
 		589A28A220CB391D00858CCB /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		58C1ACB020CC0B8D00240C3D /* CustomerFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerFileManager.swift; sourceTree = "<group>"; };
 		58C1ACB220CC181A00240C3D /* lslkjsdf.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = lslkjsdf.playground; path = ../../../../../Desktop/lslkjsdf.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		58C1ACB320CC249800240C3D /* TransactionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionManager.swift; sourceTree = "<group>"; };
 		58F9F6E020CB4F87003C520B /* SiriBankerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SiriBankerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F9F6E220CB4F87003C520B /* SiriBankerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SiriBankerKit.h; sourceTree = "<group>"; };
 		58F9F6E320CB4F87003C520B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 		589A284520CB1FA500858CCB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				58C1ACB320CC249800240C3D /* TransactionManager.swift */,
 				589A284620CB1FB100858CCB /* Account.swift */,
 				589A284820CB1FBF00858CCB /* Transaction.swift */,
 				589A284A20CB1FD600858CCB /* Customer.swift */,
@@ -666,6 +669,7 @@
 				58F9F6FF20CB4FF5003C520B /* DataLoader.swift in Sources */,
 				58F9F70020CB4FF5003C520B /* Account.swift in Sources */,
 				58F9F70320CB5014003C520B /* Formatter.swift in Sources */,
+				58C1ACB420CC249800240C3D /* TransactionManager.swift in Sources */,
 				58F9F70120CB4FF5003C520B /* Transaction.swift in Sources */,
 				58F9F70220CB4FF5003C520B /* Customer.swift in Sources */,
 				58C1ACB120CC0B8D00240C3D /* CustomerFileManager.swift in Sources */,

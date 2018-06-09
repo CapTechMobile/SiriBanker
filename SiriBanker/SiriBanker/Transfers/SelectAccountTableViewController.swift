@@ -11,7 +11,7 @@ import UIKit
 
 class SelectAccountTableViewController: UITableViewController {
     fileprivate let cellIdentifier = "AccountsSummaryTableViewCell"
-    fileprivate let dataSource = customer!.remainingAccounts
+    fileprivate let dataSource = TransactionManager.shared.remainingAccounts
 
     var isSelectingToAccount: Bool = false
 
@@ -46,9 +46,9 @@ class SelectAccountTableViewController: UITableViewController {
         let account = dataSource[indexPath.row]
         guard var customer = customer else { return }
         if isSelectingToAccount {
-            customer.toAccount = account
+            TransactionManager.shared.toAccount = account
         } else {
-            customer.fromAccount = account
+            TransactionManager.shared.fromAccount = account
         }
         navigationController?.popViewController(animated: true)
     }
