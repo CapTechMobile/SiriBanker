@@ -23,6 +23,11 @@ class AccountDetailsViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+
+        accountTypeLabel.text = account?.accountType.rawValue
+        accountNumberLabel.text = account?.accountName
+        accountBalanceLabel.text = "$\(account?.statementBalance ?? 0.00)"
+        accountBalanceDescLabel.text = "available balance"
     }
 }
 
@@ -39,7 +44,8 @@ extension AccountDetailsViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.amountLabel.text = "$\(transaction.amount)"
-        cell.dateLabel.text = "\(transaction.date)"
+		let prettyDate = DateFormatters.networkDateFormatter.string(from: transaction.date)
+        cell.dateLabel.text = "\(prettyDate)"
         cell.memoLabel.text = transaction.memo
         return cell
     }
