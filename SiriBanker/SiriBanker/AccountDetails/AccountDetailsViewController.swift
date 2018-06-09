@@ -6,8 +6,8 @@
 //  Copyright © 2018 LBrands. All rights reserved.
 //
 
-import UIKit
 import SiriBankerKit
+import UIKit
 
 class AccountDetailsViewController: UIViewController {
     @IBOutlet var topBackgroundView: UIView!
@@ -45,7 +45,7 @@ extension AccountDetailsViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.amountLabel.text = "$\(transaction.amount)"
-		let prettyDate = DateFormatters.networkDateFormatter.string(from: transaction.date)
+        let prettyDate = DateFormatters.networkDateFormatter.string(from: transaction.date)
         cell.dateLabel.text = "\(prettyDate)"
         cell.memoLabel.text = transaction.memo
         return cell

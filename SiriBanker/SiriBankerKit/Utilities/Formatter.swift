@@ -8,14 +8,14 @@
 
 import Foundation
 
-class DateFormatters {
-    static var networkDateFormatter: DateFormatter = {
+public class DateFormatters {
+    public static var networkDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
 
-    static var timeFormatter: DateFormatter = {
+    public static var timeFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "h:mm a"
         return formatter

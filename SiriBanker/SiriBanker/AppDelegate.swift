@@ -7,8 +7,8 @@
 //
 
 import Intents
-import UIKit
 import SiriBankerKit
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
