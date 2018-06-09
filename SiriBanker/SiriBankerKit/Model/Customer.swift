@@ -26,7 +26,7 @@ public struct Customer: Decodable {
     public var toAccount: Account?
     public var fromAccount: Account?
     public var remainingAccounts: [Account] {
-        return accounts.filter({ $0 != toAccount || $0 != fromAccount })
+        return accounts.filter({ $0 != toAccount && $0 != fromAccount })
     }
 
     static func defaultCustomer() -> Customer {
