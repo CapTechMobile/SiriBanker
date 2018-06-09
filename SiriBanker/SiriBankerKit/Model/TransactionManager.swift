@@ -11,29 +11,47 @@ import Foundation
 public class TransactionManager {
     public static var shared = TransactionManager()
 
-    public var customer: Customer?
+    public var currentCustomer: Customer?
     public var toAccount: Account?
     public var fromAccount: Account?
     public var amount: Double?
     public var memo: String?
     public var remainingAccounts: [Account] {
-        return customer?.accounts.filter({ $0 != toAccount && $0 != fromAccount }) ?? []
+        return currentCustomer?.accounts.filter({ $0 != toAccount && $0 != fromAccount }) ?? []
     }
 
     public func sendTransaction() -> TransationCreationStatus {
-		guard var customer = customer, let toAcct = toAccount, let fromAcct = fromAccount, let amount = amount else {
-			return .failure(.invalidData)
-		}
-		let fromTransaction = Transaction(amount: -amount)
-		let toTransaction = Transaction(amount: amount)
-		customer.accounts.first(where: { $0 == toAcct })?.transactions.append(toTransaction)
-		customer.accounts.first(where: { $0 == fromAcct })?.transactions.append(fromTransaction)
+        guard var currentCustomer = currentCustomer, let toAcct = toAccount, let fromAcct = fromAccount, let amount = amount else {
+            return .failure(.invalidData)
+        }
+        let fromTransaction = Transaction(amount: -amount)
+        let toTransaction = Transaction(amount: amount)
+        currentCustomer.accounts = currentCustomer.accounts.map({
+            if $0 == toAcct {
+                var to = $0
+                to.transactions.append(toTransaction)
+                return to
+            }
+            return $0
+        })
+        currentCustomer.accounts = currentCustomer.accounts.map({
+            if $0 == fromAcct {
+                var from = $0
+                from.transactions.append(fromTransaction)
+                return from
+            }
+            return $0
+        })
+        customer = currentCustomer
+        let customerFileManager = CustomerFileManager()
+        try! customerFileManager.writeCustomerToDisk()
+
         clearTransaction()
         return .success
     }
 
     public func clearTransaction() {
-        customer = nil
+        currentCustomer = nil
         toAccount = nil
         fromAccount = nil
         amount = nil

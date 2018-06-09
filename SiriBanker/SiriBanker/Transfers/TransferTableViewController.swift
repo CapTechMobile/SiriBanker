@@ -18,7 +18,7 @@ class TransferTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        transactionManager.customer = customer
+        transactionManager.currentCustomer = customer
         tableView.tableFooterView = UIView()
     }
 
@@ -33,7 +33,7 @@ class TransferTableViewController: UITableViewController {
     }
 
     @IBAction func transferButtonTapped(_: Any) {
-		let response = transactionManager.sendTransaction()
+        let response = transactionManager.sendTransaction()
         AlertManager.showAlert(response.alertObj, on: self)
         clearView()
     }

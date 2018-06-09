@@ -19,6 +19,15 @@ public class CustomerFileManager {
         customer = try loadCustomerObjectFromFile(urls: urls)
     }
 
+    public func writeCustomerToDisk() throws {
+        let urls = try CustomerDataURLs()
+
+        let encoder = JSONEncoder()
+        let customerData = try encoder.encode(customer)
+        try customerData.write(to: urls.customerDataURL)
+        print("just saved to \(urls.customerDataURL.path)")
+    }
+
     private func copyDefaultDataIfNecessary(urls: CustomerDataURLs) throws {
         if !customerDataFileExistsInDocumentsDirectory(urls: urls) {
             try fileManager.copyItem(at: urls.defaultCustomerDataURL, to: urls.customerDataURL)
@@ -28,7 +37,7 @@ public class CustomerFileManager {
     private func loadCustomerObjectFromFile(urls: CustomerDataURLs) throws -> Customer {
         let data = try Data(contentsOf: URL(fileURLWithPath: urls.customerDataURL.path), options: .mappedIfSafe)
         let decoder = JSONDecoder()
-        let customer = try! decoder.decode(Customer.self, from: data)
+        let customer = try decoder.decode(Customer.self, from: data)
         print(customer)
         return customer
     }
