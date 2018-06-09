@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SiriBankerKit
 
 class AccountDetailsViewController: UIViewController {
     @IBOutlet var topBackgroundView: UIView!

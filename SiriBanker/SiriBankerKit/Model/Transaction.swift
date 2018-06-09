@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct Transaction: Decodable {
-    let id: String
-    let amount: Double
-    let date: Date
-    let memo: String
+public struct Transaction: Decodable {
+    public let id: String
+    public let amount: Double
+    public let date: Date
+    public let memo: String
 
     enum CodingKeys: String, CodingKey {
         case id

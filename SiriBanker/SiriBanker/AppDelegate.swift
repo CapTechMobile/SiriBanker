@@ -8,6 +8,7 @@
 
 import Intents
 import UIKit
+import SiriBankerKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        print(customer)
+        print(SiriBankerKit.customer)
         registerUserSpecificVocabulary()
         return true
     }
