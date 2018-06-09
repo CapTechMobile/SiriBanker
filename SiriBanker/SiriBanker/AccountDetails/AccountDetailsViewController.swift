@@ -25,9 +25,11 @@ class AccountDetailsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
 
-        accountTypeLabel.text = account?.accountType.rawValue
-        accountNumberLabel.text = account?.accountName
-        accountBalanceLabel.text = "$\(account?.statementBalance ?? 0.00)"
+        guard let account = account else { return }
+
+        accountTypeLabel.text = account.accountType.rawValue
+        accountNumberLabel.text = account.accountName
+        accountBalanceLabel.text = Formatters.formatAsCurrency(double: account.statementBalance)
         accountBalanceDescLabel.text = "available balance"
     }
 }
@@ -44,8 +46,8 @@ extension AccountDetailsViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TransactionTableViewCell, let transaction = account?.transactions[indexPath.row] else {
             return UITableViewCell()
         }
-        cell.amountLabel.text = "$\(transaction.amount)"
-        let prettyDate = DateFormatters.networkDateFormatter.string(from: transaction.date)
+        cell.amountLabel.text = Formatters.formatAsCurrency(double: transaction.amount)
+        let prettyDate = Formatters.networkDateFormatter.string(from: transaction.date)
         cell.dateLabel.text = "\(prettyDate)"
         cell.memoLabel.text = transaction.memo
         return cell

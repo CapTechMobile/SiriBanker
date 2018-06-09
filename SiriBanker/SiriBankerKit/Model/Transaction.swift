@@ -26,7 +26,7 @@ public struct Transaction: Decodable {
         id = try container.decode(String.self, forKey: .id) // extracting the data
         amount = try container.decode(Double.self, forKey: .amount) // extracting the data
         let dateString = try container.decode(String.self, forKey: .date)
-        date = DateFormatters.networkDateFormatter.date(from: dateString)!
+        date = Formatters.networkDateFormatter.date(from: dateString)!
         memo = try container.decode(String.self, forKey: .memo)
     }
 }

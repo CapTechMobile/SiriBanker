@@ -25,7 +25,7 @@ public struct Customer: Decodable {
     public let accounts: [Account]
 
     static func defaultCustomer() -> Customer {
-        let bundle = Bundle(for: TestClass.self as! AnyClass)
+        let bundle = Bundle(for: TestClass.self)
         let path = bundle.path(forResource: "startupData", ofType: "json")!
         let data = try! Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         let decoder = JSONDecoder()
@@ -34,20 +34,3 @@ public struct Customer: Decodable {
         return customer
     }
 }
-
-//
-// do {
-//        if let path = Bundle.main.path(forResource: "startUpData", ofType: "json") {
-//
-//                      let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-//                    let decoder = JSONDecoder()
-//                    customer = try decoder.decode(Customer.self, from: data)
-//                    }
-//
-//      } else {
-//         throw JSONError.missingFile
-//      }
-//
-//      catch  {
-//                    return Customer(customerName:"", customerId:"", accounts:[Account]())
-//    }

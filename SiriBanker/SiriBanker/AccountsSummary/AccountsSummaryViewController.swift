@@ -34,7 +34,7 @@ extension AccountsSummaryViewController: UITableViewDataSource {
         let account = customer.accounts[indexPath.row]
         cell.accountTypeLabel.text = account.accountType.rawValue
         cell.accountNumberLabel.text = account.accountName
-        cell.accountBalanceLabel.text = "$\(account.statementBalance)"
+        cell.accountBalanceLabel.text = Formatters.formatAsCurrency(double: account.statementBalance)
         cell.accountBalanceDescriptionLabel.text = "available balance"
         return cell
     }
