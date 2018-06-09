@@ -28,10 +28,9 @@ class AccountsSummaryTableViewCell: UITableViewCell {
 
     func configure(with account: Account) {
         let currencyFormatter = Formatters.currencyFormatter
-        currencyFormatter.string(from: NSNumber(value: account.statementBalance))
         accountTypeLabel.text = account.accountType.rawValue
         accountNumberLabel.text = account.accountName
-        accountBalanceLabel.text = "$\(account.statementBalance)"
+        accountBalanceLabel.text = currencyFormatter.string(from: NSNumber(value: account.statementBalance))
         accountBalanceDescriptionLabel.text = "available balance"
     }
 }
