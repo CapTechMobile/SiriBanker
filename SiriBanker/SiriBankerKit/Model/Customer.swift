@@ -23,11 +23,6 @@ public struct Customer: Decodable {
     public let customerName: String
     public let customerId: String
     public let accounts: [Account]
-    public var toAccount: Account?
-    public var fromAccount: Account?
-    public var remainingAccounts: [Account] {
-        return accounts.filter({ $0 != toAccount && $0 != fromAccount })
-    }
 
     static func defaultCustomer() -> Customer {
         let bundle = Bundle(for: TestClass.self)

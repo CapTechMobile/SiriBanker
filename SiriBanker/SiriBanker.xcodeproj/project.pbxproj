@@ -37,6 +37,7 @@
 		E3FAE7CD20CB2A930045A573 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */; };
 		E3FAE7D220CB37940045A573 /* TransferTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7D120CB37940045A573 /* TransferTableViewController.swift */; };
 		E3FAE7D920CC03140045A573 /* SelectAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7D820CC03140045A573 /* SelectAccountTableViewController.swift */; };
+		E3FAE7DB20CC0B9E0045A573 /* TransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7DA20CC0B9E0045A573 /* TransactionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,7 @@
 		E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		E3FAE7D120CB37940045A573 /* TransferTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTableViewController.swift; sourceTree = "<group>"; };
 		E3FAE7D820CC03140045A573 /* SelectAccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAccountTableViewController.swift; sourceTree = "<group>"; };
+		E3FAE7DA20CC0B9E0045A573 /* TransactionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 				589A284620CB1FB100858CCB /* Account.swift */,
 				589A284820CB1FBF00858CCB /* Transaction.swift */,
 				589A284A20CB1FD600858CCB /* Customer.swift */,
+				E3FAE7DA20CC0B9E0045A573 /* TransactionManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 			files = (
 				58F9F6FF20CB4FF5003C520B /* DataLoader.swift in Sources */,
 				58F9F70020CB4FF5003C520B /* Account.swift in Sources */,
+				E3FAE7DB20CC0B9E0045A573 /* TransactionManager.swift in Sources */,
 				58F9F70320CB5014003C520B /* Formatter.swift in Sources */,
 				58F9F70120CB4FF5003C520B /* Transaction.swift in Sources */,
 				58F9F70220CB4FF5003C520B /* Customer.swift in Sources */,

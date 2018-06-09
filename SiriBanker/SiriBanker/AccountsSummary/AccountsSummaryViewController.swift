@@ -33,11 +33,7 @@ extension AccountsSummaryViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let account = dataSource[indexPath.row]
-        cell.accountTypeLabel.text = account.accountType.rawValue
-        cell.accountNumberLabel.text = account.accountName
-        cell.accountBalanceLabel.text = Formatters.formatAsCurrency(double: account.statementBalance)
-        cell.accountBalanceLabel.textColor = account.statementBalance < 0 ? UIColor.red : UIColor.green
-        cell.accountBalanceDescriptionLabel.text = "available balance"
+        cell.configure(with: account)
         return cell
     }
 }

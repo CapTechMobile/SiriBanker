@@ -11,7 +11,7 @@ import UIKit
 
 class SelectAccountTableViewController: UITableViewController {
     fileprivate let cellIdentifier = "AccountsSummaryTableViewCell"
-    fileprivate let dataSource = customer.remainingAccounts
+    fileprivate let dataSource = TransactionManager.shared.remainingAccounts
 
     var isSelectingToAccount: Bool = false
 
@@ -35,19 +35,16 @@ class SelectAccountTableViewController: UITableViewController {
             return UITableViewCell()
         }
         let account = dataSource[indexPath.row]
-        cell.accountTypeLabel.text = account.accountType.rawValue
-        cell.accountNumberLabel.text = account.accountName
-        cell.accountBalanceLabel.text = "$\(account.statementBalance)"
-        cell.accountBalanceDescriptionLabel.text = "available balance"
+        cell.configure(with: account)
         return cell
     }
 
     override func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         let account = dataSource[indexPath.row]
         if isSelectingToAccount {
-            customer.toAccount = account
+            TransactionManager.shared.toAccount = account
         } else {
-            customer.fromAccount = account
+            TransactionManager.shared.fromAccount = account
         }
         navigationController?.popViewController(animated: true)
     }

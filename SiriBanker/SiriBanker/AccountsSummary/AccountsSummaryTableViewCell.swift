@@ -6,6 +6,7 @@
 //  Copyright © 2018 LBrands. All rights reserved.
 //
 
+import SiriBankerKit
 import UIKit
 
 class AccountsSummaryTableViewCell: UITableViewCell {
@@ -23,5 +24,14 @@ class AccountsSummaryTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+
+    func configure(with account: Account) {
+        let currencyFormatter = Formatters.currencyFormatter
+        currencyFormatter.string(from: NSNumber(value: account.statementBalance))
+        accountTypeLabel.text = account.accountType.rawValue
+        accountNumberLabel.text = account.accountName
+        accountBalanceLabel.text = "$\(account.statementBalance)"
+        accountBalanceDescriptionLabel.text = "available balance"
     }
 }

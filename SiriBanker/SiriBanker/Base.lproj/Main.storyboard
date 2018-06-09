@@ -311,7 +311,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ca3-bT-0hb">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ca3-bT-0hb">
                                                     <rect key="frame" x="31" y="26" width="313" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="kjJ-1G-6yI"/>
@@ -347,6 +347,9 @@
                                                     <state key="normal" title="TRANSFER">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="transferButtonTapped:" destination="7Ro-ZS-aXt" eventType="touchUpInside" id="4mf-3f-Khe"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
