@@ -10,8 +10,8 @@ import Foundation
 import SiriBankerKit
 
 public extension Bundle {
-	public static var siriBankerBundle: Bundle {
-		// The bundle will change depending if the framework is for iOS or watchOS.
-		return Bundle(for: CustomerFileManager.self)
-	}
+    public static var siriBankerBundle: Bundle {
+        // The bundle will change depending if the framework is for iOS or watchOS.
+        return Bundle(for: CustomerFileManager.self)
+    }
 }

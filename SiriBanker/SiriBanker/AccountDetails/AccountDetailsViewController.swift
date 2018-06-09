@@ -36,12 +36,12 @@ class AccountDetailsViewController: UIViewController {
         accountBalanceLabel.text = Formatters.formatAsCurrency(double: account.statementBalance)
         accountBalanceLabel.textColor = account.statementBalance.expressiveColor
         accountBalanceDescLabel.text = "available balance"
-		donateActivity(accountName: account.accountName)
+        donateActivity(accountName: account.accountName)
     }
-	
-	fileprivate func donateActivity(accountName: String) {
-		self.userActivity = NSUserActivity.viewAccountActivity(accountName: accountName)
-	}
+
+    fileprivate func donateActivity(accountName: String) {
+        userActivity = NSUserActivity.viewAccountActivity(accountName: accountName)
+    }
 }
 
 extension AccountDetailsViewController: UITableViewDelegate {

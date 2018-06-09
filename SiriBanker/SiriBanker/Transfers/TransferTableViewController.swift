@@ -70,7 +70,7 @@ class TransferTableViewController: UITableViewController {
         }
 
         if indexPath.row == 0 {
-			selectAccountVC.isSelectingToAccount = false
+            selectAccountVC.isSelectingToAccount = false
         } else {
             selectAccountVC.isSelectingToAccount = true
         }

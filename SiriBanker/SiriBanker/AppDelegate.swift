@@ -7,6 +7,7 @@
 //
 
 import Intents
+import os.log
 import SiriBankerKit
 import UIKit
 
@@ -29,29 +30,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("\(error)")
         }
     }
-	
-	// MARK: - Handle Siri functionality
-	
-	func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-		/* if let intent = userActivity.interaction?.intent as? OrderSoupIntent {
-			handle(intent)
-			return true
-		} else */ if userActivity.activityType == NSUserActivity.viewMenuActivityType {
-			handleUserActivity()
-			return true
-		}
-		return false
-	}
-	
-	
-	private func handleUserActivity() {
-//		guard let window = window,
-//			let rootViewController = window.rootViewController as? UINavigationController,
-//			let orderHistoryViewController = rootViewController.viewControllers.first as? OrderHistoryTableViewController else {
-//				os_log("Failed to access OrderHistoryTableViewController.")
-//				return
-//		}
-//		let segue = OrderHistoryTableViewController.SegueIdentifiers.soupMenu.rawValue
-//		orderHistoryViewController.performSegue(withIdentifier: segue, sender: nil)
-	}
+
+    // MARK: - Handle Siri functionality
+
+    func application(_: UIApplication, continue userActivity: NSUserActivity, restorationHandler _: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        /* if let intent = userActivity.interaction?.intent as? OrderSoupIntent {
+         handle(intent)
+         return true
+         } else */ if userActivity.activityType == NSUserActivity.viewAccountActivityType {
+            handle(userActivity)
+            return true
+        }
+        return false
+    }
+
+    private func handle(_ userActivity: NSUserActivity) {
+        guard let window = window,
+            let rootViewController = window.rootViewController as? UITabBarController,
+            let accountSummaryNavVC = rootViewController.viewControllers?.first as? UINavigationController else {
+            os_log("Failed to access AccountsSummaryViewController.")
+            return
+        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let detailsView = storyboard.instantiateViewController(withIdentifier: "AccountDetailsViewController") as? AccountDetailsViewController,
+            let account_name = userActivity.userInfo?["account_name"] as? String else {
+            return
+        }
+        detailsView.account = customer.accounts.first(where: { $0.accountName == account_name })
+        accountSummaryNavVC.popToRootViewController(animated: false)
+        accountSummaryNavVC.pushViewController(detailsView, animated: true)
+    }
 }
