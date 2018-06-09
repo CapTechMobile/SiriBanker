@@ -33,9 +33,14 @@ class TransferTableViewController: UITableViewController {
     }
 
     @IBAction func transferButtonTapped(_: Any) {
-        let response = transactionManager.sendTransaction()
-        AlertManager.showAlert(response.alertObj, on: self)
-        clearView()
+        if let amountText = amountTextField.text {
+            transactionManager.amount = Double(amountText)
+            let response = transactionManager.sendTransaction()
+            AlertManager.showAlert(response.alertObj, on: self)
+            clearView()
+        } else {
+            AlertManager.showAlert(TransationCreationStatus.failure(TransactionFailureDescription.invalidData).alertObj, on: self)
+        }
     }
 
     fileprivate func clearView() {
