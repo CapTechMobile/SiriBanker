@@ -51,6 +51,6 @@ public struct Account: Decodable, Equatable {
 
 public extension Double {
     public var expressiveColor: UIColor {
-        return self < 0 ? UIColor.red : UIColor.green
+        return self < 0 ? .red : UIColor(red: 0.0, green: 0.7, blue: 0.0, alpha: 1)
     }
 }
