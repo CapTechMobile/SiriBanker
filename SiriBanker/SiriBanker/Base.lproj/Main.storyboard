@@ -348,7 +348,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="transferButtonTapped:" destination="7Ro-ZS-aXt" eventType="touchUpInside" id="4mf-3f-Khe"/>
+                                                        <action selector="transferButtonTapped:" destination="7Ro-ZS-aXt" eventType="touchUpInside" id="NIp-0q-Vrm"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

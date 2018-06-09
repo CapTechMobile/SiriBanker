@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/awhite/Documents/Xcode/SiriBanker/SiriBanker/SiriBanker/AlertManager.swift">
+   </FileRef>
+   <FileRef
       location = "self:SiriBanker.xcodeproj">
    </FileRef>
 </Workspace>

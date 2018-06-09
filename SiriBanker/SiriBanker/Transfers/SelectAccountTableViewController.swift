@@ -22,7 +22,6 @@ class SelectAccountTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in _: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
@@ -35,7 +34,7 @@ class SelectAccountTableViewController: UITableViewController {
             return UITableViewCell()
         }
         let account = dataSource[indexPath.row]
-		cell.configure(with: account)
+        cell.configure(with: account)
         return cell
     }
 
