@@ -36,6 +36,7 @@
 		E3FAE7CB20CB26A80045A573 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7CA20CB26A80045A573 /* AccountDetailsViewController.swift */; };
 		E3FAE7CD20CB2A930045A573 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */; };
 		E3FAE7D220CB37940045A573 /* TransferTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7D120CB37940045A573 /* TransferTableViewController.swift */; };
+		E3FAE7D920CC03140045A573 /* SelectAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7D820CC03140045A573 /* SelectAccountTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,7 @@
 		E3FAE7CA20CB26A80045A573 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 		E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		E3FAE7D120CB37940045A573 /* TransferTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTableViewController.swift; sourceTree = "<group>"; };
+		E3FAE7D820CC03140045A573 /* SelectAccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAccountTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,8 +284,8 @@
 		589A287420CB25FE00858CCB /* AccountsSummary */ = {
 			isa = PBXGroup;
 			children = (
-				589A287520CB25FE00858CCB /* AccountsSummaryTableViewCell.swift */,
 				589A287620CB25FE00858CCB /* AccountsSummaryViewController.swift */,
+				589A287520CB25FE00858CCB /* AccountsSummaryTableViewCell.swift */,
 			);
 			path = AccountsSummary;
 			sourceTree = "<group>";
@@ -350,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				E3FAE7D120CB37940045A573 /* TransferTableViewController.swift */,
+				E3FAE7D820CC03140045A573 /* SelectAccountTableViewController.swift */,
 			);
 			path = Transfers;
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */,
 				E3FAE7D220CB37940045A573 /* TransferTableViewController.swift in Sources */,
 				E3FAE7CB20CB26A80045A573 /* AccountDetailsViewController.swift in Sources */,
+				E3FAE7D920CC03140045A573 /* SelectAccountTableViewController.swift in Sources */,
 				589A287820CB25FE00858CCB /* AccountsSummaryViewController.swift in Sources */,
 				589A287720CB25FE00858CCB /* AccountsSummaryTableViewCell.swift in Sources */,
 			);

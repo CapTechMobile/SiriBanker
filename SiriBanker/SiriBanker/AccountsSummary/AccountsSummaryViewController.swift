@@ -12,6 +12,7 @@ import UIKit
 class AccountsSummaryViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     fileprivate let cellIdentifier = "AccountsSummaryTableViewCell"
+	fileprivate let dataSource = customer.accounts
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +25,14 @@ class AccountsSummaryViewController: UIViewController {
 
 extension AccountsSummaryViewController: UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return customer.accounts.count
+        return dataSource.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? AccountsSummaryTableViewCell else {
             return UITableViewCell()
         }
-        let account = customer.accounts[indexPath.row]
+        let account = dataSource[indexPath.row]
         cell.accountTypeLabel.text = account.accountType.rawValue
         cell.accountNumberLabel.text = account.accountName
         cell.accountBalanceLabel.text = Formatters.formatAsCurrency(double: account.statementBalance)
@@ -43,7 +44,7 @@ extension AccountsSummaryViewController: UITableViewDataSource {
 extension AccountsSummaryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let account = customer.accounts[indexPath.row]
+        let account = dataSource[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let detailsView = storyboard.instantiateViewController(withIdentifier: "AccountDetailsViewController") as? AccountDetailsViewController else {
             return

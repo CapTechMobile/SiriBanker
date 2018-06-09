@@ -17,4 +17,8 @@ class TransferTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

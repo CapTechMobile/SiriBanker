@@ -13,7 +13,14 @@ public enum AccountType: String {
     case savings
 }
 
-public struct Account: Decodable {
+public struct Account: Decodable, Equatable {
+    public static func == (lhs: Account, rhs: Account) -> Bool {
+        return lhs.accountName == rhs.accountName &&
+            lhs.accountType == rhs.accountType &&
+            lhs.statementBalance == rhs.statementBalance &&
+            lhs.transactions.count == rhs.transactions.count
+    }
+
     public let accountName: String
     public let accountType: AccountType
     public let statementBalance: Double
