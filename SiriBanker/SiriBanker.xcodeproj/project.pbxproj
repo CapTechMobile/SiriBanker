@@ -235,10 +235,10 @@
 			isa = PBXGroup;
 			children = (
 				589A287C20CB2E7F00858CCB /* SiriBanker.entitlements */,
+				589A281F20CB1AC200858CCB /* AppDelegate.swift */,
 				589A287420CB25FE00858CCB /* AccountsSummary */,
 				E3FAE7C920CB268B0045A573 /* AccountDetails */,
 				E3FAE7D020CB35F00045A573 /* Transfers */,
-				589A281F20CB1AC200858CCB /* AppDelegate.swift */,
 				589A282320CB1AC200858CCB /* Main.storyboard */,
 				589A282620CB1AC400858CCB /* Assets.xcassets */,
 				589A282820CB1AC400858CCB /* LaunchScreen.storyboard */,

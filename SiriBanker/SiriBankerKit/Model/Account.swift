@@ -25,6 +25,11 @@ public struct Account: Decodable, Equatable {
     public let accountType: AccountType
     public let statementBalance: Double
     public let transactions: [Transaction]
+    public var transactionsSorted: [Transaction] {
+        var transactions = self.transactions
+        transactions.sort(by: { $0.date > $1.date })
+        return transactions
+    }
 
     enum CodingKeys: String, CodingKey {
         case accountName

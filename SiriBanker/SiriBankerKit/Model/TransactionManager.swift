@@ -20,8 +20,9 @@ public class TransactionManager {
         return customer?.accounts.filter({ $0 != toAccount && $0 != fromAccount }) ?? []
     }
 
-    public func sendTransaction() {
+    public func sendTransaction() -> TransationCreationStatus {
         clearTransaction()
+        return .success
     }
 
     public func clearTransaction() {
@@ -31,4 +32,15 @@ public class TransactionManager {
         amount = nil
         memo = nil
     }
+}
+
+// could make this have a raw value of string...
+public enum TransactionFailureDescription {
+    case invalidData
+    case insufficientFunds
+}
+
+public enum TransationCreationStatus {
+    case success
+    case failure(TransactionFailureDescription)
 }
