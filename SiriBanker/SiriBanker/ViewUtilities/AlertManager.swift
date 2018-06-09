@@ -11,9 +11,9 @@ import SiriBankerKit
 import UIKit
 
 struct AlertManager {
-    static func showAlert(_ alertObj: AlertObject, on vc: UIViewController) {
+    static func showAlert(_ alertObj: AlertObject, on vc: UIViewController, completion: ((UIAlertAction) -> Void)? = nil) {
         let alert = UIAlertController(title: alertObj.title, message: alertObj.msg, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: completion))
         vc.present(alert, animated: true, completion: nil)
     }
 }

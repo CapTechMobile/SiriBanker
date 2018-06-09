@@ -36,8 +36,12 @@ class TransferTableViewController: UITableViewController {
         if let amountText = amountTextField.text {
             transactionManager.amount = Double(amountText)
             let response = transactionManager.sendTransaction()
-            AlertManager.showAlert(response.alertObj, on: self)
-            clearView()
+            AlertManager.showAlert(response.alertObj, on: self) { _ in
+                if response == TransationCreationStatus.success {
+					self.clearView()
+					self.tabBarController?.selectedIndex = 0
+                }
+            }
         } else {
             AlertManager.showAlert(TransationCreationStatus.failure(TransactionFailureDescription.invalidData).alertObj, on: self)
         }

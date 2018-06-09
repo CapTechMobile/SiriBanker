@@ -25,7 +25,7 @@ class AccountsSummaryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         dataSource = customer.accounts
-		tableView.reloadData()
+        tableView.reloadData()
     }
 }
 

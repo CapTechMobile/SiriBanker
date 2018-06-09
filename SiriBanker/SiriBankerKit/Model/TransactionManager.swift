@@ -63,7 +63,7 @@ public class TransactionManager {
     }
 }
 
-public enum TransationCreationStatus {
+public enum TransationCreationStatus: Equatable {
     case success
     case failure(TransactionFailureDescription)
 
