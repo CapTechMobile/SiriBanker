@@ -13,7 +13,7 @@ public enum AccountType: String {
     case savings
 }
 
-public struct Account: Decodable, Equatable {
+public struct Account: Codable, Equatable {
     public static func == (lhs: Account, rhs: Account) -> Bool {
         return lhs.accountName == rhs.accountName &&
             lhs.accountType == rhs.accountType &&
@@ -46,6 +46,13 @@ public struct Account: Decodable, Equatable {
         let accountTypeString = try container.decode(String.self, forKey: CodingKeys.accountType)
         accountType = AccountType(rawValue: accountTypeString)!
         transactions = try container.decode([Transaction].self, forKey: .transactions)
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(accountName, forKey: .accountName)
+        try container.encode(accountType.rawValue, forKey: .accountType)
+        try container.encode(transactions, forKey: .transactions)
     }
 }
 

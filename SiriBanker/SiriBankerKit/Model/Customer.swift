@@ -19,7 +19,7 @@ enum JSONError: Error {
 private class TestClass {
 }
 
-public struct Customer: Decodable {
+public struct Customer: Codable {
     public let customerName: String
     public let customerId: String
     public let accounts: [Account]

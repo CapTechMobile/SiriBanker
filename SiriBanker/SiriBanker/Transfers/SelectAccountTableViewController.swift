@@ -35,7 +35,7 @@ class SelectAccountTableViewController: UITableViewController {
             return UITableViewCell()
         }
         let account = dataSource[indexPath.row]
-		cell.configure(with: account)
+        cell.configure(with: account)
         return cell
     }
 

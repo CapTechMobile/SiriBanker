@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Transaction: Decodable {
+public struct Transaction: Codable {
     public let id: String
     public let amount: Double
     public let date: Date
@@ -28,5 +28,14 @@ public struct Transaction: Decodable {
         let dateString = try container.decode(String.self, forKey: .date)
         date = Formatters.networkDateFormatter.date(from: dateString)!
         memo = try container.decode(String.self, forKey: .memo)
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(amount, forKey: .amount)
+        let dateString = Formatters.networkDateFormatter.string(from: date)
+        try container.encode(dateString, forKey: .date)
+        try container.encode(memo, forKey: .memo)
     }
 }
