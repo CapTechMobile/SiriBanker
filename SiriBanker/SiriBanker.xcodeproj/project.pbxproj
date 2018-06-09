@@ -37,6 +37,7 @@
 		58F9F70120CB4FF5003C520B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284820CB1FBF00858CCB /* Transaction.swift */; };
 		58F9F70220CB4FF5003C520B /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284A20CB1FD600858CCB /* Customer.swift */; };
 		58F9F70320CB5014003C520B /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A287220CB25F100858CCB /* Formatter.swift */; };
+		E3990CF020CC4ACA00621F28 /* NSUserActivity+IntentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3990CEF20CC4ACA00621F28 /* NSUserActivity+IntentData.swift */; };
 		E3FAE7CB20CB26A80045A573 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7CA20CB26A80045A573 /* AccountDetailsViewController.swift */; };
 		E3FAE7CD20CB2A930045A573 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */; };
 		E3FAE7D220CB37940045A573 /* TransferTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7D120CB37940045A573 /* TransferTableViewController.swift */; };
@@ -154,6 +155,7 @@
 		58F9F6E820CB4F87003C520B /* SiriBankerKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiriBankerKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F9F6EF20CB4F87003C520B /* SiriBankerKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriBankerKitTests.swift; sourceTree = "<group>"; };
 		58F9F6F120CB4F87003C520B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3990CEF20CC4ACA00621F28 /* NSUserActivity+IntentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSUserActivity+IntentData.swift"; sourceTree = "<group>"; };
 		E3FAE7CA20CB26A80045A573 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 		E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		E3FAE7D120CB37940045A573 /* TransferTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTableViewController.swift; sourceTree = "<group>"; };
@@ -250,11 +252,12 @@
 		589A281E20CB1AC200858CCB /* SiriBanker */ = {
 			isa = PBXGroup;
 			children = (
-				5860EC0A20CC30E50023ECCC /* ViewUtilities */,
 				589A287C20CB2E7F00858CCB /* SiriBanker.entitlements */,
+				5860EC0A20CC30E50023ECCC /* ViewUtilities */,
 				589A287420CB25FE00858CCB /* AccountsSummary */,
 				E3FAE7C920CB268B0045A573 /* AccountDetails */,
 				E3FAE7D020CB35F00045A573 /* Transfers */,
+				E3990CF120CC4AD500621F28 /* Shared */,
 				589A281F20CB1AC200858CCB /* AppDelegate.swift */,
 				589A282320CB1AC200858CCB /* Main.storyboard */,
 				589A282620CB1AC400858CCB /* Assets.xcassets */,
@@ -359,6 +362,15 @@
 				58F9F6F120CB4F87003C520B /* Info.plist */,
 			);
 			path = SiriBankerKitTests;
+			sourceTree = "<group>";
+		};
+		E3990CF120CC4AD500621F28 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E3990CEF20CC4ACA00621F28 /* NSUserActivity+IntentData.swift */,
+			);
+			name = Shared;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		E3FAE7C920CB268B0045A573 /* AccountDetails */ = {
@@ -646,6 +658,7 @@
 				E3FAE7CD20CB2A930045A573 /* TransactionTableViewCell.swift in Sources */,
 				589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */,
 				E3FAE7D220CB37940045A573 /* TransferTableViewController.swift in Sources */,
+				E3990CF020CC4ACA00621F28 /* NSUserActivity+IntentData.swift in Sources */,
 				E3FAE7CB20CB26A80045A573 /* AccountDetailsViewController.swift in Sources */,
 				E3FAE7D920CC03140045A573 /* SelectAccountTableViewController.swift in Sources */,
 				589A287820CB25FE00858CCB /* AccountsSummaryViewController.swift in Sources */,
