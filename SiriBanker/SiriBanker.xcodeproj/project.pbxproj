@@ -238,7 +238,7 @@
 			children = (
 				589A287C20CB2E7F00858CCB /* SiriBanker.entitlements */,
 				589A281F20CB1AC200858CCB /* AppDelegate.swift */,
-				E321E73220CC1E1E00F1FA8D /* AlertManager.swift */,
+				E321E73420CC217000F1FA8D /* ViewUtilities */,
 				589A287420CB25FE00858CCB /* AccountsSummary */,
 				E3FAE7C920CB268B0045A573 /* AccountDetails */,
 				E3FAE7D020CB35F00045A573 /* Transfers */,
@@ -343,6 +343,14 @@
 				58F9F6F120CB4F87003C520B /* Info.plist */,
 			);
 			path = SiriBankerKitTests;
+			sourceTree = "<group>";
+		};
+		E321E73420CC217000F1FA8D /* ViewUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				E321E73220CC1E1E00F1FA8D /* AlertManager.swift */,
+			);
+			path = ViewUtilities;
 			sourceTree = "<group>";
 		};
 		E3FAE7C920CB268B0045A573 /* AccountDetails */ = {
