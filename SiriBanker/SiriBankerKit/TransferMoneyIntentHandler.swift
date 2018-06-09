@@ -15,7 +15,6 @@ public class TransferMoneyIntentHandler: NSObject, INTransferMoneyIntentHandling
 
     /// - Tag: confirm_intent
     public func confirm(intent _: INTransferMoneyIntent, completion _: @escaping (INTransferMoneyIntentHandling) -> Void) {
-
         //        /*
         //        The confirm phase provides an opportunity for you to perform any final validation of the intent parameters and to
         //        verify that any needed services are available. You might confirm that you can communicate with your company’s server
@@ -39,7 +38,6 @@ public class TransferMoneyIntentHandler: NSObject, INTransferMoneyIntentHandling
     }
 
     public func handle(intent _: INTransferMoneyIntent, completion _: @escaping (INTransferMoneyIntentHandling) -> Void) {
-
         //        guard let soup = intent.soup,
         //            let order = Order(from: intent)
         //        else {

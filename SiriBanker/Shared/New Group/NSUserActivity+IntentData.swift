@@ -16,7 +16,7 @@ extension NSUserActivity {
     private static let searchableItemContentType = "Accounts"
 
     /// matches value in info.plist file
-    public static let viewAccountActivityType = "com.SiriBanker.viewCheckingAccount"
+    public static let viewAccountActivityType = "com.captech.siribanker.viewCheckingAccount"
 
     public static var viewAccountActivity: NSUserActivity {
         let userActivity = NSUserActivity(activityType: NSUserActivity.viewAccountActivityType)
@@ -25,10 +25,11 @@ extension NSUserActivity {
         userActivity.title = NSLocalizedString("VIEW_ACCOUNT_DETAILS", bundle: Bundle.main, comment: "View account activity title")
         userActivity.isEligibleForSearch = true
         userActivity.isEligibleForPrediction = true
-        //		userActivity.userInfo = [:]
+        //userActivity.userInfo = [:]
+		
         #if os(iOS)
             let attributes = CSSearchableItemAttributeSet(itemContentType: NSUserActivity.searchableItemContentType)
-            //		attributes.thumbnailData = #imageLiteral(resourceName: "tomato").pngData() // Used as an icon in Search.
+            // attributes.thumbnailData = #imageLiteral(resourceName: "tomato").pngData() // Used as an icon in Search.
             attributes.keywords = userActivity.viewAccountSearchableKeywords
             attributes.displayName = NSLocalizedString("VIEW_ACCOUNT_DETAILS", bundle: Bundle.siriBankerBundle, comment: "View account activity title")
             let description = NSLocalizedString("VIEW_MENU_CONTENT_DESCRIPTION", bundle: Bundle.siriBankerBundle, comment: "View account content description")

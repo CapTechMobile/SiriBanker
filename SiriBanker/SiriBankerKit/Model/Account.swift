@@ -71,9 +71,7 @@ public extension Double {
 }
 
 public extension Account {
-
     func asIntentAccount() -> INPaymentAccount {
-
         let nickname = INSpeakableString(spokenPhrase: accountName)
         let number: String? = nil
         let accountType = self.accountType.intentAccountType()

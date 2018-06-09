@@ -42,6 +42,7 @@ class AccountDetailsViewController: UIViewController {
     }
 
     fileprivate func donateActivity() {
+        print("Just called: \(#file) -> \(#function)")
         userActivity = NSUserActivity.viewAccountActivity
     }
 }
