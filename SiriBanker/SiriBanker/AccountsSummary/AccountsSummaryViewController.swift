@@ -35,6 +35,7 @@ extension AccountsSummaryViewController: UITableViewDataSource {
         cell.accountTypeLabel.text = account.accountType.rawValue
         cell.accountNumberLabel.text = account.accountName
         cell.accountBalanceLabel.text = Formatters.formatAsCurrency(double: account.statementBalance)
+        cell.accountBalanceLabel.textColor = account.statementBalance < 0 ? UIColor.red : UIColor.green
         cell.accountBalanceDescriptionLabel.text = "available balance"
         return cell
     }

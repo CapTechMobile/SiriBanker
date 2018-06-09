@@ -30,6 +30,7 @@ class AccountDetailsViewController: UIViewController {
         accountTypeLabel.text = account.accountType.rawValue
         accountNumberLabel.text = account.accountName
         accountBalanceLabel.text = Formatters.formatAsCurrency(double: account.statementBalance)
+        accountBalanceLabel.textColor = account.statementBalance < 0 ? UIColor.red : UIColor.green
         accountBalanceDescLabel.text = "available balance"
     }
 }
@@ -47,6 +48,7 @@ extension AccountDetailsViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.amountLabel.text = Formatters.formatAsCurrency(double: transaction.amount)
+        cell.amountLabel.textColor = transaction.amount < 0 ? UIColor.red : UIColor.green
         let prettyDate = Formatters.networkDateFormatter.string(from: transaction.date)
         cell.dateLabel.text = "\(prettyDate)"
         cell.memoLabel.text = transaction.memo
