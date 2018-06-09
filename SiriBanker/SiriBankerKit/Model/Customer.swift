@@ -30,7 +30,6 @@ public struct Customer: Decodable {
         let data = try! Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         let decoder = JSONDecoder()
         let customer = try! decoder.decode(Customer.self, from: data)
-        //        print(customer)
         return customer
     }
 }
