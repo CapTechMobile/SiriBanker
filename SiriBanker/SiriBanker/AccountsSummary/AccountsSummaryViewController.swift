@@ -12,11 +12,11 @@ import UIKit
 class AccountsSummaryViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     fileprivate let cellIdentifier = "AccountsSummaryTableViewCell"
-    fileprivate let dataSource = customer.accounts
+    fileprivate var dataSource = customer.accounts
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        dataSource = customer.accounts
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
