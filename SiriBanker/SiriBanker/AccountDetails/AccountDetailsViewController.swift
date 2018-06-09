@@ -55,4 +55,8 @@ extension AccountDetailsViewController: UITableViewDataSource {
         cell.configure(with: transaction)
         return cell
     }
+
+    func tableView(_: UITableView, willSelectRowAt _: IndexPath) -> IndexPath? {
+        return nil
+    }
 }
