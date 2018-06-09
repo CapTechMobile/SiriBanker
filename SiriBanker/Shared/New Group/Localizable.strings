@@ -6,6 +6,6 @@
   Copyright © 2018 LBrands. All rights reserved.
 */
 
-"VIEW_ACCOUNT_DETAILS" = "Account Details";
-"VIEW_ACCOUNT_CONTENT_DESCRIPTION" = "Display your Account details.";
-"VIEW_ACCOUNT_SUGGESTED_PHRASE" = "View my Accounts"; // TODO: evaluate how to specify an account?
+"VIEW_ACCOUNT_DETAILS" = "Checking Account Details";
+"VIEW_ACCOUNT_CONTENT_DESCRIPTION" = "Display your Checking Account details.";
+"VIEW_ACCOUNT_SUGGESTED_PHRASE" = "View my Checking Account";

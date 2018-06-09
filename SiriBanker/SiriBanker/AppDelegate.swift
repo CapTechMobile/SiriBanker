@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return false
     }
 
-    private func handle(_ userActivity: NSUserActivity) {
+    private func handle(_: NSUserActivity) {
         guard let window = window,
             let rootViewController = window.rootViewController as? UITabBarController,
             let accountSummaryNavVC = rootViewController.viewControllers?.first as? UINavigationController else {
@@ -52,11 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let detailsView = storyboard.instantiateViewController(withIdentifier: "AccountDetailsViewController") as? AccountDetailsViewController,
-            let account_name = userActivity.userInfo?["account_name"] as? String else {
+        guard let detailsView = storyboard.instantiateViewController(withIdentifier: "AccountDetailsViewController") as? AccountDetailsViewController else {
             return
         }
-        detailsView.account = customer.accounts.first(where: { $0.accountName == account_name })
+        detailsView.account = customer.accounts.first(where: { $0.accountType == .checking })
         accountSummaryNavVC.popToRootViewController(animated: false)
         accountSummaryNavVC.pushViewController(detailsView, animated: true)
     }
