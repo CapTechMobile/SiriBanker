@@ -44,7 +44,11 @@ public class TransactionManager {
         })
         customer = currentCustomer
         let customerFileManager = CustomerFileManager()
-        try! customerFileManager.writeCustomerToDisk()
+        do {
+            try customerFileManager.writeCustomerToDisk()
+        } catch {
+            return .failure(.insufficientFunds)
+        }
 
         clearTransaction()
         return .success
