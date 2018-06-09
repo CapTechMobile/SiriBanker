@@ -26,6 +26,7 @@ public class CustomerFileManager {
         let customerData = try encoder.encode(customer)
         try customerData.write(to: urls.customerDataURL)
         print("just saved to \(urls.customerDataURL.path)")
+        try runOnColdStart()
     }
 
     private func copyDefaultDataIfNecessary(urls: CustomerDataURLs) throws {

@@ -21,6 +21,12 @@ class AccountsSummaryViewController: UIViewController {
         tableView.delegate = self
         tableView.tableFooterView = UIView()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        dataSource = customer.accounts
+		tableView.reloadData()
+    }
 }
 
 extension AccountsSummaryViewController: UITableViewDataSource {
