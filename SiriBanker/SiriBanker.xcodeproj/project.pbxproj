@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		5860EC0C20CC31080023ECCC /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860EC0B20CC31080023ECCC /* AlertManager.swift */; };
 		5860EC0E20CC33CC0023ECCC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5860EC0D20CC33CC0023ECCC /* README.md */; };
-		5860EC1220CC4AA00023ECCC /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5860EC1120CC4AA00023ECCC /* Intents.intentdefinition */; };
-		5860EC1320CC4AA30023ECCC /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5860EC1120CC4AA00023ECCC /* Intents.intentdefinition */; };
-		5860EC1520CC4AA50023ECCC /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5860EC1120CC4AA00023ECCC /* Intents.intentdefinition */; };
+		5860EC1220CC4AA00023ECCC /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5860EC1120CC4AA00023ECCC /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		5860EC1320CC4AA30023ECCC /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5860EC1120CC4AA00023ECCC /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		5860EC1520CC4AA50023ECCC /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5860EC1120CC4AA00023ECCC /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		5860EC1620CC4AA60023ECCC /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5860EC1120CC4AA00023ECCC /* Intents.intentdefinition */; };
+		5860EC1820CC50210023ECCC /* TransferMoneyIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860EC1720CC50210023ECCC /* TransferMoneyIntentHandler.swift */; };
 		589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A281F20CB1AC200858CCB /* AppDelegate.swift */; };
 		589A282520CB1AC200858CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589A282320CB1AC200858CCB /* Main.storyboard */; };
 		589A282720CB1AC400858CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589A282620CB1AC400858CCB /* Assets.xcassets */; };
@@ -123,6 +124,7 @@
 		5860EC0D20CC33CC0023ECCC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5860EC0F20CC49560023ECCC /* SiriBankerIntent.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = SiriBankerIntent.entitlements; sourceTree = "<group>"; };
 		5860EC1120CC4AA00023ECCC /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		5860EC1720CC50210023ECCC /* TransferMoneyIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferMoneyIntentHandler.swift; sourceTree = "<group>"; };
 		589A281C20CB1AC200858CCB /* SiriBanker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriBanker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		589A281F20CB1AC200858CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		589A282420CB1AC200858CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 				589A284520CB1FA500858CCB /* Model */,
 				58F9F6E220CB4F87003C520B /* SiriBankerKit.h */,
 				58F9F6E320CB4F87003C520B /* Info.plist */,
+				5860EC1720CC50210023ECCC /* TransferMoneyIntentHandler.swift */,
 			);
 			path = SiriBankerKit;
 			sourceTree = "<group>";
@@ -705,6 +708,7 @@
 				58F9F70020CB4FF5003C520B /* Account.swift in Sources */,
 				58F9F70320CB5014003C520B /* Formatter.swift in Sources */,
 				58C1ACB420CC249800240C3D /* TransactionManager.swift in Sources */,
+				5860EC1820CC50210023ECCC /* TransferMoneyIntentHandler.swift in Sources */,
 				58F9F70120CB4FF5003C520B /* Transaction.swift in Sources */,
 				58F9F70220CB4FF5003C520B /* Customer.swift in Sources */,
 				5860EC1620CC4AA60023ECCC /* Intents.intentdefinition in Sources */,

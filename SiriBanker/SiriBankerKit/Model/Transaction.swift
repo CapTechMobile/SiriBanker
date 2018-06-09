@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Intents
 
 public struct Transaction: Codable {
     public let id: String
@@ -57,5 +58,22 @@ public struct Transaction: Codable {
         let dateString = Formatters.networkDateFormatter.string(from: date)
         try container.encode(dateString, forKey: .date)
         try container.encode(memo, forKey: .memo)
+    }
+}
+
+public struct IntentTransaction {
+    let transactionAmount: INPaymentAmount
+    let transactionScheduledDate: INDateComponentsRange
+    let transactionNote: String
+
+    init(transaction: Transaction) {
+        let decimalValue = NSDecimalNumber(decimal: NSNumber(value: transaction.amount).decimalValue)
+        transactionAmount = INPaymentAmount(
+            amountType: .unknown,
+            amount: INCurrencyAmount(amount: decimalValue, currencyCode: "USD")
+        )
+        let nowComponents = Calendar.current.dateComponents([.year, .month, .day], from: transaction.date)
+        transactionScheduledDate = INDateComponentsRange(start: nowComponents, end: nowComponents)
+        transactionNote = transaction.memo
     }
 }

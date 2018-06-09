@@ -35,7 +35,7 @@ class TransferTableViewController: UITableViewController {
     @IBAction func transferButtonTapped(_: Any) {
         if let amountText = amountTextField.text {
             transactionManager.amount = Double(amountText)
-            let response = transactionManager.sendTransaction()
+            let response = transactionManager.sendTransaction(transactionManagerSender: .app)
             AlertManager.showAlert(response.alertObj, on: self) { _ in
                 if response == TransationCreationStatus.success {
                     self.clearView()
@@ -70,7 +70,7 @@ class TransferTableViewController: UITableViewController {
         }
 
         if indexPath.row == 0 {
-			selectAccountVC.isSelectingToAccount = false
+            selectAccountVC.isSelectingToAccount = false
         } else {
             selectAccountVC.isSelectingToAccount = true
         }

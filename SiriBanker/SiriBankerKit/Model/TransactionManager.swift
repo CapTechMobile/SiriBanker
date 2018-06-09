@@ -7,6 +7,12 @@
 //
 
 import Foundation
+import Intents
+
+public enum TransactionManagerSender {
+    case app
+    case appExtension
+}
 
 public class TransactionManager {
     public static var shared = TransactionManager()
@@ -20,7 +26,7 @@ public class TransactionManager {
         return currentCustomer?.accounts.filter({ $0 != toAccount && $0 != fromAccount }) ?? []
     }
 
-    public func sendTransaction() -> TransationCreationStatus {
+    public func sendTransaction(transactionManagerSender: TransactionManagerSender) -> TransationCreationStatus {
         guard var currentCustomer = currentCustomer, let toAcct = toAccount, let fromAcct = fromAccount, let amount = amount else {
             return .failure(.invalidData)
         }
@@ -51,8 +57,19 @@ public class TransactionManager {
         } catch {
             return .failure(.insufficientFunds)
         }
+
+        if transactionManagerSender == .app {
+            donateTransferIntent()
+        }
         clearTransaction()
         return .success
+    }
+
+    func donateTransferIntent() {
+        //        let intent = INTransferMoneyIntent(
+        //        from: , to: <#T##INPaymentAccount?#>,
+        //        transactionAmount: <#T##INPaymentAmount?#>, transactionScheduledDate:
+        //         <#T##INDateComponentsRange?#>, transactionNote: <#T##String?#>)
     }
 
     public func clearTransaction() {

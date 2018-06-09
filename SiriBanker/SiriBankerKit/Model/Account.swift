@@ -7,10 +7,18 @@
 //
 
 import Foundation
+import Intents
 
 public enum AccountType: String {
     case checking
     case savings
+
+    func intentAccountType() -> INAccountType {
+        switch self {
+        case .checking: return INAccountType.checking
+        case .savings: return INAccountType.saving
+        }
+    }
 }
 
 public struct Account: Codable, Equatable {
@@ -59,5 +67,27 @@ public struct Account: Codable, Equatable {
 public extension Double {
     public var expressiveColor: UIColor {
         return self < 0 ? .red : UIColor(red: 0.0, green: 0.7, blue: 0.0, alpha: 1)
+    }
+}
+
+public extension Account {
+
+    func asIntentAccount() -> INPaymentAccount {
+
+        let nickname = INSpeakableString(spokenPhrase: accountName)
+        let number: String? = nil
+        let accountType = self.accountType.intentAccountType()
+        let organizationName = INSpeakableString(spokenPhrase: "Siri Banker")
+        let balanceDecimalNumber = NSDecimalNumber(decimal: NSNumber(value: statementBalance).decimalValue)
+        let inBalanceAmount = INBalanceAmount(amount: balanceDecimalNumber, balanceType: .money)
+        let secondaryBalance: INBalanceAmount? = nil
+
+        return INPaymentAccount(
+            nickname: nickname,
+            number: number,
+            accountType: accountType,
+            organizationName: organizationName,
+            balance: inBalanceAmount,
+            secondaryBalance: secondaryBalance)
     }
 }
