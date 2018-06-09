@@ -35,10 +35,7 @@ class SelectAccountTableViewController: UITableViewController {
             return UITableViewCell()
         }
         let account = dataSource[indexPath.row]
-        cell.accountTypeLabel.text = account.accountType.rawValue
-        cell.accountNumberLabel.text = account.accountName
-        cell.accountBalanceLabel.text = "$\(account.statementBalance)"
-        cell.accountBalanceDescriptionLabel.text = "available balance"
+		cell.configure(with: account)
         return cell
     }
 
