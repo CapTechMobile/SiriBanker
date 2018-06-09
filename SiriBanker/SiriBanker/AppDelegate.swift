@@ -16,8 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        registerUserSpecificVocabulary()
+
+        initializeCustomerData()
         return true
+    }
+
+    func initializeCustomerData() {
+        do {
+            let customerFileManager = CustomerFileManager()
+            try customerFileManager.runOnColdStart()
+
+        } catch {
+            print("\(error)")
+        }
     }
 
     func applicationWillResignActive(_: UIApplication) {
@@ -40,10 +51,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-    func registerUserSpecificVocabulary() {
-        let accountNames = customer.accounts.map { $0.accountName }
-        INVocabulary.shared().setVocabularyStrings(NSOrderedSet(array: accountNames), of: .paymentsAccountNickname)
     }
 }

@@ -14,37 +14,21 @@ class TransferTableViewController: UITableViewController {
     @IBOutlet var fromLabel: UILabel!
     @IBOutlet var amountTextField: UITextField!
     @IBOutlet var transferButton: UIButton!
-    fileprivate var transactionManager = TransactionManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        transactionManager.customer = customer
-        tableView.tableFooterView = UIView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let toAccount = transactionManager.toAccount {
+        guard let customer = customer else { return }
+        if let toAccount = customer.toAccount {
             toLabel.text = "To: \(toAccount.accountName)"
         }
-        if let fromAccount = transactionManager.fromAccount {
+        if let fromAccount = customer.fromAccount {
             fromLabel.text = "From: \(fromAccount.accountName)"
         }
     }
-
-    @IBAction func transferButtonTapped(_: Any) {
-        let response = transactionManager.sendTransaction()
-        AlertManager.showAlert(response.alertObj, on: self)
-        clearView()
-    }
-
-    fileprivate func clearView() {
-        toLabel.text = "To: "
-        fromLabel.text = "From: "
-        amountTextField.text = ""
-    }
-
-    // MARK: - TableView stuff
 
     override func tableView(_: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         if indexPath.row == 0 || indexPath.row == 1 {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public var customer: Customer = Customer.defaultCustomer()
+public var customer: Customer?
 
 enum JSONError: Error {
     case missingFile

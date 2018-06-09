@@ -22,23 +22,22 @@
 		589A289720CB2EFD00858CCB /* SiriBankerIntentUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 589A288A20CB2EFD00858CCB /* SiriBankerIntentUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		589A289A20CB2EFD00858CCB /* SiriBankerIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 589A288120CB2EFD00858CCB /* SiriBankerIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		589A28A320CB391D00858CCB /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589A28A220CB391D00858CCB /* Intents.framework */; };
+		58C1ACB120CC0B8D00240C3D /* CustomerFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C1ACB020CC0B8D00240C3D /* CustomerFileManager.swift */; };
 		58F9F6E920CB4F87003C520B /* SiriBankerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F9F6E020CB4F87003C520B /* SiriBankerKit.framework */; };
 		58F9F6F020CB4F87003C520B /* SiriBankerKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F9F6EF20CB4F87003C520B /* SiriBankerKitTests.swift */; };
 		58F9F6F220CB4F87003C520B /* SiriBankerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 58F9F6E220CB4F87003C520B /* SiriBankerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		58F9F6F520CB4F87003C520B /* SiriBankerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F9F6E020CB4F87003C520B /* SiriBankerKit.framework */; };
 		58F9F6F720CB4F87003C520B /* SiriBankerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 58F9F6E020CB4F87003C520B /* SiriBankerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		58F9F6FE20CB4FF5003C520B /* startupData.json in Resources */ = {isa = PBXBuildFile; fileRef = 589A284120CB1F7F00858CCB /* startupData.json */; };
+		58F9F6FE20CB4FF5003C520B /* customerData.json in Resources */ = {isa = PBXBuildFile; fileRef = 589A284120CB1F7F00858CCB /* customerData.json */; };
 		58F9F6FF20CB4FF5003C520B /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284320CB1F8D00858CCB /* DataLoader.swift */; };
 		58F9F70020CB4FF5003C520B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284620CB1FB100858CCB /* Account.swift */; };
 		58F9F70120CB4FF5003C520B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284820CB1FBF00858CCB /* Transaction.swift */; };
 		58F9F70220CB4FF5003C520B /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284A20CB1FD600858CCB /* Customer.swift */; };
 		58F9F70320CB5014003C520B /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A287220CB25F100858CCB /* Formatter.swift */; };
-		E321E73320CC1E1E00F1FA8D /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321E73220CC1E1E00F1FA8D /* AlertManager.swift */; };
 		E3FAE7CB20CB26A80045A573 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7CA20CB26A80045A573 /* AccountDetailsViewController.swift */; };
 		E3FAE7CD20CB2A930045A573 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */; };
 		E3FAE7D220CB37940045A573 /* TransferTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7D120CB37940045A573 /* TransferTableViewController.swift */; };
 		E3FAE7D920CC03140045A573 /* SelectAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7D820CC03140045A573 /* SelectAccountTableViewController.swift */; };
-		E3FAE7DB20CC0B9E0045A573 /* TransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7DA20CC0B9E0045A573 /* TransactionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,7 +121,7 @@
 		589A283020CB1AC400858CCB /* SiriBankerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiriBankerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		589A283420CB1AC400858CCB /* SiriBankerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriBankerTests.swift; sourceTree = "<group>"; };
 		589A283620CB1AC400858CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		589A284120CB1F7F00858CCB /* startupData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = startupData.json; sourceTree = "<group>"; };
+		589A284120CB1F7F00858CCB /* customerData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = customerData.json; sourceTree = "<group>"; };
 		589A284320CB1F8D00858CCB /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		589A284620CB1FB100858CCB /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		589A284820CB1FBF00858CCB /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
@@ -141,18 +140,18 @@
 		589A289220CB2EFD00858CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		589A289420CB2EFD00858CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		589A28A220CB391D00858CCB /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		58C1ACB020CC0B8D00240C3D /* CustomerFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerFileManager.swift; sourceTree = "<group>"; };
+		58C1ACB220CC181A00240C3D /* lslkjsdf.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = lslkjsdf.playground; path = ../../../../../Desktop/lslkjsdf.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		58F9F6E020CB4F87003C520B /* SiriBankerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SiriBankerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F9F6E220CB4F87003C520B /* SiriBankerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SiriBankerKit.h; sourceTree = "<group>"; };
 		58F9F6E320CB4F87003C520B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58F9F6E820CB4F87003C520B /* SiriBankerKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiriBankerKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F9F6EF20CB4F87003C520B /* SiriBankerKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriBankerKitTests.swift; sourceTree = "<group>"; };
 		58F9F6F120CB4F87003C520B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E321E73220CC1E1E00F1FA8D /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		E3FAE7CA20CB26A80045A573 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 		E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		E3FAE7D120CB37940045A573 /* TransferTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTableViewController.swift; sourceTree = "<group>"; };
 		E3FAE7D820CC03140045A573 /* SelectAccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAccountTableViewController.swift; sourceTree = "<group>"; };
-		E3FAE7DA20CC0B9E0045A573 /* TransactionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,11 +236,10 @@
 			isa = PBXGroup;
 			children = (
 				589A287C20CB2E7F00858CCB /* SiriBanker.entitlements */,
-				589A281F20CB1AC200858CCB /* AppDelegate.swift */,
-				E321E73420CC217000F1FA8D /* ViewUtilities */,
 				589A287420CB25FE00858CCB /* AccountsSummary */,
 				E3FAE7C920CB268B0045A573 /* AccountDetails */,
 				E3FAE7D020CB35F00045A573 /* Transfers */,
+				589A281F20CB1AC200858CCB /* AppDelegate.swift */,
 				589A282320CB1AC200858CCB /* Main.storyboard */,
 				589A282620CB1AC400858CCB /* Assets.xcassets */,
 				589A282820CB1AC400858CCB /* LaunchScreen.storyboard */,
@@ -262,7 +260,7 @@
 		589A284020CB1F7F00858CCB /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				589A284120CB1F7F00858CCB /* startupData.json */,
+				589A284120CB1F7F00858CCB /* customerData.json */,
 				589A284320CB1F8D00858CCB /* DataLoader.swift */,
 			);
 			path = Data;
@@ -274,7 +272,8 @@
 				589A284620CB1FB100858CCB /* Account.swift */,
 				589A284820CB1FBF00858CCB /* Transaction.swift */,
 				589A284A20CB1FD600858CCB /* Customer.swift */,
-				E3FAE7DA20CC0B9E0045A573 /* TransactionManager.swift */,
+				58C1ACB020CC0B8D00240C3D /* CustomerFileManager.swift */,
+				58C1ACB220CC181A00240C3D /* lslkjsdf.playground */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,14 +342,6 @@
 				58F9F6F120CB4F87003C520B /* Info.plist */,
 			);
 			path = SiriBankerKitTests;
-			sourceTree = "<group>";
-		};
-		E321E73420CC217000F1FA8D /* ViewUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				E321E73220CC1E1E00F1FA8D /* AlertManager.swift */,
-			);
-			path = ViewUtilities;
 			sourceTree = "<group>";
 		};
 		E3FAE7C920CB268B0045A573 /* AccountDetails */ = {
@@ -595,7 +586,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58F9F6FE20CB4FF5003C520B /* startupData.json in Resources */,
+				58F9F6FE20CB4FF5003C520B /* customerData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,7 +632,6 @@
 				E3FAE7D920CC03140045A573 /* SelectAccountTableViewController.swift in Sources */,
 				589A287820CB25FE00858CCB /* AccountsSummaryViewController.swift in Sources */,
 				589A287720CB25FE00858CCB /* AccountsSummaryTableViewCell.swift in Sources */,
-				E321E73320CC1E1E00F1FA8D /* AlertManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,10 +665,10 @@
 			files = (
 				58F9F6FF20CB4FF5003C520B /* DataLoader.swift in Sources */,
 				58F9F70020CB4FF5003C520B /* Account.swift in Sources */,
-				E3FAE7DB20CC0B9E0045A573 /* TransactionManager.swift in Sources */,
 				58F9F70320CB5014003C520B /* Formatter.swift in Sources */,
 				58F9F70120CB4FF5003C520B /* Transaction.swift in Sources */,
 				58F9F70220CB4FF5003C520B /* Customer.swift in Sources */,
+				58C1ACB120CC0B8D00240C3D /* CustomerFileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

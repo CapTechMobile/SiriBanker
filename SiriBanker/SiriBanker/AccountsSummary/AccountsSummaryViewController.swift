@@ -12,7 +12,7 @@ import UIKit
 class AccountsSummaryViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     fileprivate let cellIdentifier = "AccountsSummaryTableViewCell"
-    fileprivate let dataSource = customer.accounts
+    fileprivate let dataSource = customer!.accounts
 
     override func viewDidLoad() {
         super.viewDidLoad()
