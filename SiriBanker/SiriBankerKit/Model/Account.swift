@@ -8,16 +8,16 @@
 
 import Foundation
 
-enum AccountType: String {
+public enum AccountType: String {
     case checking
     case savings
 }
 
-struct Account: Decodable {
-    let accountName: String
-    let accountType: AccountType
-    let statementBalance: Double
-    let transactions: [Transaction]
+public struct Account: Decodable {
+    public let accountName: String
+    public let accountType: AccountType
+    public let statementBalance: Double
+    public let transactions: [Transaction]
 
     enum CodingKeys: String, CodingKey {
         case accountName

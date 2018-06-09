@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SiriBankerKit
 
 class AccountsSummaryViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
