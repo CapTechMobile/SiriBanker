@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5860EC0C20CC31080023ECCC /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860EC0B20CC31080023ECCC /* AlertManager.swift */; };
 		589A282020CB1AC200858CCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A281F20CB1AC200858CCB /* AppDelegate.swift */; };
 		589A282520CB1AC200858CCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589A282320CB1AC200858CCB /* Main.storyboard */; };
 		589A282720CB1AC400858CCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589A282620CB1AC400858CCB /* Assets.xcassets */; };
@@ -35,7 +36,6 @@
 		58F9F70120CB4FF5003C520B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284820CB1FBF00858CCB /* Transaction.swift */; };
 		58F9F70220CB4FF5003C520B /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A284A20CB1FD600858CCB /* Customer.swift */; };
 		58F9F70320CB5014003C520B /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589A287220CB25F100858CCB /* Formatter.swift */; };
-		E321E73620CC28D600F1FA8D /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321E73520CC28D600F1FA8D /* AlertManager.swift */; };
 		E3FAE7CB20CB26A80045A573 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7CA20CB26A80045A573 /* AccountDetailsViewController.swift */; };
 		E3FAE7CD20CB2A930045A573 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */; };
 		E3FAE7D220CB37940045A573 /* TransferTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAE7D120CB37940045A573 /* TransferTableViewController.swift */; };
@@ -114,6 +114,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5860EC0B20CC31080023ECCC /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		589A281C20CB1AC200858CCB /* SiriBanker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriBanker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		589A281F20CB1AC200858CCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		589A282420CB1AC200858CCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,7 +152,6 @@
 		58F9F6E820CB4F87003C520B /* SiriBankerKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiriBankerKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F9F6EF20CB4F87003C520B /* SiriBankerKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriBankerKitTests.swift; sourceTree = "<group>"; };
 		58F9F6F120CB4F87003C520B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E321E73520CC28D600F1FA8D /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertManager.swift; path = /Users/awhite/Documents/Xcode/SiriBanker/SiriBanker/SiriBanker/AlertManager.swift; sourceTree = "<absolute>"; };
 		E3FAE7CA20CB26A80045A573 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 		E3FAE7CC20CB2A930045A573 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		E3FAE7D120CB37940045A573 /* TransferTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTableViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +208,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5860EC0A20CC30E50023ECCC /* ViewUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				5860EC0B20CC31080023ECCC /* AlertManager.swift */,
+			);
+			path = ViewUtilities;
+			sourceTree = "<group>";
+		};
 		589A281320CB1AC200858CCB = {
 			isa = PBXGroup;
 			children = (
@@ -239,8 +247,8 @@
 		589A281E20CB1AC200858CCB /* SiriBanker */ = {
 			isa = PBXGroup;
 			children = (
+				5860EC0A20CC30E50023ECCC /* ViewUtilities */,
 				589A287C20CB2E7F00858CCB /* SiriBanker.entitlements */,
-				E321E73720CC28DB00F1FA8D /* View Utilities */,
 				589A287420CB25FE00858CCB /* AccountsSummary */,
 				E3FAE7C920CB268B0045A573 /* AccountDetails */,
 				E3FAE7D020CB35F00045A573 /* Transfers */,
@@ -348,14 +356,6 @@
 				58F9F6F120CB4F87003C520B /* Info.plist */,
 			);
 			path = SiriBankerKitTests;
-			sourceTree = "<group>";
-		};
-		E321E73720CC28DB00F1FA8D /* View Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				E321E73520CC28D600F1FA8D /* AlertManager.swift */,
-			);
-			path = "View Utilities";
 			sourceTree = "<group>";
 		};
 		E3FAE7C920CB268B0045A573 /* AccountDetails */ = {
@@ -646,7 +646,7 @@
 				E3FAE7D920CC03140045A573 /* SelectAccountTableViewController.swift in Sources */,
 				589A287820CB25FE00858CCB /* AccountsSummaryViewController.swift in Sources */,
 				589A287720CB25FE00858CCB /* AccountsSummaryTableViewCell.swift in Sources */,
-				E321E73620CC28D600F1FA8D /* AlertManager.swift in Sources */,
+				5860EC0C20CC31080023ECCC /* AlertManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
