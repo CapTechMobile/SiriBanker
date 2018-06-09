@@ -23,7 +23,10 @@ public struct Account: Decodable, Equatable {
 
     public let accountName: String
     public let accountType: AccountType
-    public let statementBalance: Double
+    public var statementBalance: Double {
+        return transactions.reduce(0, { $0 + $1.amount })
+    }
+
     public let transactions: [Transaction]
     public var transactionsSorted: [Transaction] {
         var transactions = self.transactions
@@ -34,7 +37,6 @@ public struct Account: Decodable, Equatable {
     enum CodingKeys: String, CodingKey {
         case accountName
         case accountType
-        case statementBalance
         case transactions
     }
 
@@ -43,7 +45,6 @@ public struct Account: Decodable, Equatable {
         accountName = try container.decode(String.self, forKey: .accountName) // extracting the data
         let accountTypeString = try container.decode(String.self, forKey: CodingKeys.accountType)
         accountType = AccountType(rawValue: accountTypeString)!
-        statementBalance = try container.decode(Double.self, forKey: .statementBalance)
         transactions = try container.decode([Transaction].self, forKey: .transactions)
     }
 }
