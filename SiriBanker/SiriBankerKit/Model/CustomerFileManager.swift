@@ -39,7 +39,7 @@ public class CustomerFileManager {
         let data = try Data(contentsOf: URL(fileURLWithPath: urls.customerDataURL.path), options: .mappedIfSafe)
         let decoder = JSONDecoder()
         let customer = try decoder.decode(Customer.self, from: data)
-        print(customer)
+        //   print(customer)
         return customer
     }
 

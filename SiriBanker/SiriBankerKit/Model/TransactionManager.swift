@@ -77,6 +77,8 @@ public class TransactionManager {
             transactionNote: intentTransaction.transactionNote
         )
 
+        transferPaymentIntent.suggestedInvocationPhrase = "Transfer Money to \(toAccount.accountName)"
+
         let interaction = INInteraction(intent: transferPaymentIntent, response: nil)
         interaction.donate { error in
             if error != nil {

@@ -79,7 +79,7 @@ public extension Account {
         let accountType = self.accountType.intentAccountType()
         let organizationName = INSpeakableString(spokenPhrase: "Siri Banker")
         let balanceDecimalNumber = NSDecimalNumber(decimal: NSNumber(value: statementBalance).decimalValue)
-        let inBalanceAmount = INBalanceAmount(amount: balanceDecimalNumber, balanceType: .money)
+        let inBalanceAmount = INBalanceAmount(amount: balanceDecimalNumber, currencyCode: "USD")
         let secondaryBalance: INBalanceAmount? = nil
 
         return INPaymentAccount(
