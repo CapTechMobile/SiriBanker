@@ -20,14 +20,12 @@ public class CustomerFileManager {
     }
 
     private func copyDefaultDataIfNecessary(urls: CustomerDataURLs) throws {
-
         if !customerDataFileExistsInDocumentsDirectory(urls: urls) {
             try fileManager.copyItem(at: urls.defaultCustomerDataURL, to: urls.customerDataURL)
         }
     }
 
     private func loadCustomerObjectFromFile(urls: CustomerDataURLs) throws -> Customer {
-
         let data = try Data(contentsOf: URL(fileURLWithPath: urls.customerDataURL.path), options: .mappedIfSafe)
         let decoder = JSONDecoder()
         let customer = try! decoder.decode(Customer.self, from: data)

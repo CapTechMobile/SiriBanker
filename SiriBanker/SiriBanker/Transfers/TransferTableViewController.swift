@@ -17,17 +17,17 @@ class TransferTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.tableView.tableFooterView = UIView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //   guard let customer = customer else { return }
-        //        if let toAccount = customer.toAccount {
-        //            toLabel.text = "To: \(toAccount.accountName)"
-        //        }
-        //        if let fromAccount = customer.fromAccount {
-        //            fromLabel.text = "From: \(fromAccount.accountName)"
-        //        }
+		if let toAccount = TransactionManager.shared.toAccount {
+			toLabel.text = "To: \(toAccount.accountName)"
+		}
+		if let fromAccount = TransactionManager.shared.fromAccount {
+			fromLabel.text = "From: \(fromAccount.accountName)"
+		}
     }
 
     override func tableView(_: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
