@@ -16,13 +16,17 @@ enum JSONError: Error {
     case outOfStock
 }
 
+private class TestClass {
+}
+
 public struct Customer: Decodable {
     public let customerName: String
     public let customerId: String
     public let accounts: [Account]
 
     static func defaultCustomer() -> Customer {
-        let path = Bundle.main.path(forResource: "startupData", ofType: "json")!
+        let bundle = Bundle(for: TestClass.self as! AnyClass)
+        let path = bundle.path(forResource: "startupData", ofType: "json")!
         let data = try! Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         let decoder = JSONDecoder()
         let customer = try! decoder.decode(Customer.self, from: data)
