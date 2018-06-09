@@ -38,8 +38,8 @@ class TransferTableViewController: UITableViewController {
             let response = transactionManager.sendTransaction()
             AlertManager.showAlert(response.alertObj, on: self) { _ in
                 if response == TransationCreationStatus.success {
-					self.clearView()
-					self.tabBarController?.selectedIndex = 0
+                    self.clearView()
+                    self.tabBarController?.selectedIndex = 0
                 }
             }
         } else {

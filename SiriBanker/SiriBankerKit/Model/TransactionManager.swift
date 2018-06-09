@@ -24,8 +24,10 @@ public class TransactionManager {
         guard var currentCustomer = currentCustomer, let toAcct = toAccount, let fromAcct = fromAccount, let amount = amount else {
             return .failure(.invalidData)
         }
-        let fromTransaction = Transaction(amount: -amount)
-        let toTransaction = Transaction(amount: amount)
+        let memoString: String = memo ?? "Transfer from \(toAcct.accountName) to \(fromAcct.accountName)"
+
+        let fromTransaction = Transaction(amount: -amount, memo: memoString)
+        let toTransaction = Transaction(amount: amount, memo: memoString)
         currentCustomer.accounts = currentCustomer.accounts.map({
             if $0 == toAcct {
                 var to = $0
