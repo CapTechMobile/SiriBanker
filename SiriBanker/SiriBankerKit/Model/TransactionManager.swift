@@ -80,6 +80,7 @@ public class TransactionManager {
         transferPaymentIntent.suggestedInvocationPhrase = "Transfer Money to \(toAccount.accountName)"
 
         let interaction = INInteraction(intent: transferPaymentIntent, response: nil)
+
         interaction.donate { error in
             if error != nil {
                 if let error = error as NSError? {

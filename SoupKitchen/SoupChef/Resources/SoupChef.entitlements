@@ -6,7 +6,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.captech.SoupChef.Shared</string>
+		<string>group.com.captech.soupchef.sharedgroup</string>
 	</array>
 </dict>
 </plist>

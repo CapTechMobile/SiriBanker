@@ -1045,7 +1045,7 @@
 		589A289F20CB2EFD00858CCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = SiriBanker/SiriBankerIntent/SiriBankerIntent.entitlements;
+				CODE_SIGN_ENTITLEMENTS = /Users/mbroski/Code/SiriBanker/SiriBanker/SiriBankerIntent/SiriBankerIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Q4M6DQ9WM;
 				INFOPLIST_FILE = SiriBankerIntent/Info.plist;
@@ -1065,7 +1065,7 @@
 		589A28A020CB2EFD00858CCB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = SiriBanker/SiriBankerIntent/SiriBankerIntent.entitlements;
+				CODE_SIGN_ENTITLEMENTS = /Users/mbroski/Code/SiriBanker/SiriBanker/SiriBankerIntent/SiriBankerIntent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Q4M6DQ9WM;
 				INFOPLIST_FILE = SiriBankerIntent/Info.plist;
