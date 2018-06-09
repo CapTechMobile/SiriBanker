@@ -25,28 +25,28 @@ extension NSUserActivity {
         userActivity.title = NSLocalizedString("VIEW_ACCOUNT_DETAILS", bundle: Bundle.main, comment: "View account activity title")
         userActivity.isEligibleForSearch = true
         userActivity.isEligibleForPrediction = true
-        //userActivity.userInfo = [:]
-		
+        // userActivity.userInfo = [:]
+
         #if os(iOS)
             let attributes = CSSearchableItemAttributeSet(itemContentType: NSUserActivity.searchableItemContentType)
             // attributes.thumbnailData = #imageLiteral(resourceName: "tomato").pngData() // Used as an icon in Search.
             attributes.keywords = userActivity.viewAccountSearchableKeywords
-            attributes.displayName = NSLocalizedString("VIEW_ACCOUNT_DETAILS", bundle: Bundle.siriBankerBundle, comment: "View account activity title")
-            let description = NSLocalizedString("VIEW_MENU_CONTENT_DESCRIPTION", bundle: Bundle.siriBankerBundle, comment: "View account content description")
+            attributes.displayName = NSLocalizedString("VIEW_ACCOUNT_DETAILS", bundle: Bundle.main, comment: "View account activity title")
+            let description = NSLocalizedString("VIEW_ACCOUNT_CONTENT_DESCRIPTION", bundle: Bundle.main, comment: "View account content description")
             attributes.contentDescription = description
             userActivity.contentAttributeSet = attributes
         #endif
 
-        let phrase = NSLocalizedString("VIEW_ACCOUNT_SUGGESTED_PHRASE", bundle: Bundle.siriBankerBundle, comment: "Voice shortcut suggested phrase")
+        let phrase = NSLocalizedString("VIEW_ACCOUNT_SUGGESTED_PHRASE", bundle: Bundle.main, comment: "Voice shortcut suggested phrase")
         userActivity.suggestedInvocationPhrase = phrase
         return userActivity
     }
 
     private var viewAccountSearchableKeywords: [String] {
         return [
-            NSLocalizedString("Account", bundle: Bundle.siriBankerBundle, comment: "Searchable keyword"),
-            NSLocalizedString("Checking", bundle: Bundle.siriBankerBundle, comment: "Searchable keyword"),
-            NSLocalizedString("Details", bundle: Bundle.siriBankerBundle, comment: "Searchable keyword"),
+            NSLocalizedString("Account", bundle: Bundle.main, comment: "Searchable keyword"),
+            NSLocalizedString("Checking", bundle: Bundle.main, comment: "Searchable keyword"),
+            NSLocalizedString("Details", bundle: Bundle.main, comment: "Searchable keyword"),
         ]
     }
 }

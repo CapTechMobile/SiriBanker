@@ -15,6 +15,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
+    fileprivate let accountsSummaryIndex = 0
+
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         initializeCustomerData()
@@ -55,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let detailsView = storyboard.instantiateViewController(withIdentifier: "AccountDetailsViewController") as? AccountDetailsViewController else {
             return
         }
+        rootViewController.selectedIndex = accountsSummaryIndex
         detailsView.account = customer.accounts.first(where: { $0.accountType == .checking })
         accountSummaryNavVC.popToRootViewController(animated: false)
         accountSummaryNavVC.pushViewController(detailsView, animated: true)
