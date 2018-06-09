@@ -8,6 +8,7 @@
 
 import Foundation
 import Intents
+import os.log
 
 public enum TransactionManagerSender {
     case app
@@ -59,17 +60,33 @@ public class TransactionManager {
         }
 
         if transactionManagerSender == .app {
-            donateTransferIntent()
+            donateTransferIntent(transaction: toTransaction)
         }
         clearTransaction()
         return .success
     }
 
-    func donateTransferIntent() {
-        //        let intent = INTransferMoneyIntent(
-        //        from: , to: <#T##INPaymentAccount?#>,
-        //        transactionAmount: <#T##INPaymentAmount?#>, transactionScheduledDate:
-        //         <#T##INDateComponentsRange?#>, transactionNote: <#T##String?#>)
+    func donateTransferIntent(transaction: Transaction) {
+        guard let fromAccount = fromAccount, let toAccount = toAccount else { return }
+        let intentTransaction = transaction.convertToIntentTransaction()
+        let transferPaymentIntent = INTransferMoneyIntent(
+            from: fromAccount.asIntentAccount(),
+            to: toAccount.asIntentAccount(),
+            transactionAmount: intentTransaction.transactionAmount,
+            transactionScheduledDate: intentTransaction.transactionScheduledDate,
+            transactionNote: intentTransaction.transactionNote
+        )
+
+        let interaction = INInteraction(intent: transferPaymentIntent, response: nil)
+        interaction.donate { error in
+            if error != nil {
+                if let error = error as NSError? {
+                    os_log("Interaction donation failed: %@", log: OSLog.default, type: .error, error)
+                }
+            } else {
+                os_log("Successfully donated interaction")
+            }
+        }
     }
 
     public func clearTransaction() {

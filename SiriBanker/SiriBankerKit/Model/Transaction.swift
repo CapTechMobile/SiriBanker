@@ -59,6 +59,10 @@ public struct Transaction: Codable {
         try container.encode(dateString, forKey: .date)
         try container.encode(memo, forKey: .memo)
     }
+
+    func convertToIntentTransaction() -> IntentTransaction {
+        return IntentTransaction(transaction: self)
+    }
 }
 
 public struct IntentTransaction {
