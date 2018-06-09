@@ -21,11 +21,6 @@ class AccountsSummaryViewController: UIViewController {
         tableView.delegate = self
         tableView.tableFooterView = UIView()
     }
-
-    override func viewDidAppear(_: Bool) {
-        let customerFileManager = CustomerFileManager()
-        try! customerFileManager.writeCustomerToDisk()
-    }
 }
 
 extension AccountsSummaryViewController: UITableViewDataSource {
