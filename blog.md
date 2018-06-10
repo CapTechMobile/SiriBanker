@@ -12,17 +12,17 @@ WWDC 2018, with one of the most enthusiastic presenters in memory, changes all t
 
 ### 25 Extensions and Counting
 
-Every year Apple comes up with new ways for apps to integrate themselves within the operating system.  There are now 25 different extensions you can add to an app to keep it from getting marooned on the home screen.  From Spotlight search, to Apple Watch extensions, to local notifications.  Over the last couple of years, Apple has gradually opened up Siri to developers.  At first the list of voice intents was quite restrictive.  Now apps can generate custom intents to handle just about any kind of user interaction.
+Every year Apple comes up with new ways for apps to integrate themselves within the operating system.  There are now 25 different extensions you can add to an app to keep it from *getting marooned on the home screen*.  From Spotlight search, to Apple Watch extensions, to local notifications.  Over the last couple of years, Apple has gradually opened up Siri to developers.  At first the list of voice intents was quite restrictive.  Now apps can generate custom intents to handle just about any kind of user interaction.
 
 ![](blogImages/AddingExtension.jpeg)
 
 ### A Problem Never Solved Well by Notifications
 
-Until now, the best way to interact with users outside the app was 
+Until now, the best way to interact with users outside the app was through notifications.  But 
 
 You can't carry an Alexa with you.  There's nothing like the menagerie of iOS apps on Alexa.  CapTech's enterprise customers have invested in iOS.  Now they can 
 
-This is part of the ongoing effort to keep apps from getting marooned on the home screen.  The challenge is to integrate application functionality into the operating system of the device.  Siri shortcuts offer
+This is part of Apple's ongoing effort to keep apps from getting marooned on the home screen.  The challenge is to integrate application functionality into the operating system of the device.  Siri shortcuts offer
 
 This is our first impression after a single weekend exploring Siri Shortcuts. 
 
@@ -40,12 +40,61 @@ You will find our [sample app](https://github.com/CapTechMobile/SiriBanker) on G
 
 ### Intents
 
+To set up intents, here are a couple of things to get you started.
+
+#### 1. Turn on debug mode for Siri
+
+If you don't do this, you may have to wait a long time to see any Siri suggestions.  In Settings/Developer, eliminate the wait for suggestions to show up by toggling "Display Recent Shortcuts" and "Display Notifications on Lock Screen"
+
+![](blogImages/debugShortcuts.jpeg)
+
+#### 2. Move your business logic to a framework
+
+Users should be able to interact with your app's features without interacting with your app.  This means all your business logic needs to be segregated into its own framework, a framework that both the app and the extension depend upon.  
+
+![](blogImages/targets.jpeg)
+
+For our app `SiriBanker`:
+
+* ``SiriBankerKit`` contains all business logic.  
+* `SiriBankerIntent` gets called when to handle shortcuts
+* `SiriBankerIntentUI` manages display of data after the user taps on the Siri shortcut.  
+
+#### 3. Enable Siri Capability and App Groups
+
+App Groups will be new for customers unaccustomed to sharing data across extensions and app.  *Both* the `SiriBanker` and the `SiriBankerIntent` targets will need an entitlement file that shares the same App Group.
+
+![](blogImages/appgroup.jpeg)
+
+#### 4. Study Soup Kit
+
+Apple provides a great sample app to get started, Soup Chef.  You can download it [here](https://docs-assets.developer.apple.com/published/b2d1b84aff/AcceleratingAppInteractionsWithShortcuts.zip).  
+
+#### 4. Create a custom Intent.
+
+Create a custom intent using the new intent editor.  
+
+![](blogImages/customintent.jpg)
+
+This editor actually generates code that appears in your build directory.
+
+![](blogImages/wheresaved.jpeg)
+
+Compared to other generated code we've seen, the output isn't half bad.
+
+![](blogImages/generatedCode.jpeg)
+
+You can also create system intents using the intent definition file, but we could never get it to work.  We kept getting a 'missing intent title' error each time we tried to donate the intent.  If you figure it out, send us PR!
+
+![](blogImages/intentTitleEmpty.jpeg)
+
 
 ### User Activity
 
 One new feature is suggested activities via Siri Shortcuts. 
 These shortcuts are presented to the user at a time the system considers to be relevant, or when the user searches for a keyword in spotlight search.
-In our banking app, we created a shortcut for accessing a user's checking account. When the user completes the action normally by visiting their Checking Account Details view, the app 
+In our banking app, we created a shortcut for accessing a user's checking account. 
+When the user completes the action normally by visiting their Checking Account Details view, the app 
 creates an NSUserActivity which defines the action, and donates it to the system. Donations like these are tracked internally on the device, and used to suggest the shortcut to the user at an appropriate time.
 For example, if a customer of your bank is constantly revisiting their checking account balance at noon every other Friday, Siri and the system will learn this behavior and suggest the action to the user on subsequent Fridays via the lock screen.
 Alternatively, if the user searches in spotlight for the phrase or keywords associated with the NSUserActivity, a suggestion will appear in the search results that will navigate the user to the appropriate screen.
