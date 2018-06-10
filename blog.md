@@ -62,6 +62,8 @@ You will have to implement the AppDelegate function `application(_ application: 
 - Shortcuts are an answer to Google assistant, Alexa
 - Designed to leverage machine learning to make siri smarter and give developers a way to better integrate their apps into the OS
 - Its clear that apple wants your app to be much more than just an icon on the homescreen. Apps now should strive to be seamlessly woven into the device experience
+- Doing this prevents your device from being 'lost in the shuffle,' or forgotten on the home screen.
+- Some apps in distribution today leverage local notifications to 'remind' the user to open the app. With Siri shortcuts,
 - By using @available tags, you can begin implementing this functionality now, and avoid disrupting current user experiece for users who have not upgraded
 - Most will upgrade tho: By Christmas 2018, enerprises can expect that 70% of their customers ...
 - Building for this experiece now will put an enterprise ahead of the game and can create an experience that edges out other apps in your space.
