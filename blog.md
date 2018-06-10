@@ -28,10 +28,16 @@ Given the location, time, and day of the week, that user initiates an action, Si
 
 Even better, the user can record customized phrases to trigger the Siri shortcuts on demand.  These shortcuts can then be combined with other shortcuts to make a chain of events happen.  What's great about this: all actions are under user control and local to the device.  
 
+### Non-Profit Siri
 
-### Sample App
+Siri integration spawned a new term, *donation*.  When the user engages in an activity that the user might want to repeat with Siri, the app needs to *donate* it to Siri.  Seems like a strange verb, but here's what the code looks like:
 
-You will find our [sample app](https://github.com/CapTechMobile/SiriBanker) on GitHub.  We did all our work on the first beta of iOS 12.  Not everything worked for us as expected.
+![](blogImages/donate.jpeg)
+
+
+### Sample App: SiriBanker
+
+You will find our [sample app](https://github.com/CapTechMobile/SiriBanker) on GitHub.  We did all our work on the first beta of iOS 12.  Not everything worked for us as expected.  If you aren't interested in the code, just skip to our conclusions.  
 
 We call our app `SiriBanker`.  The goal is to build a simple banking app that can display information about multiple accounts.  There is nothing fancy here, not even authentication.  The user can view transactions and make transfers.
 
@@ -39,6 +45,9 @@ We wanted to see how far we could push Siri to:
 
 * View account information
 * Make transfers
+
+There are two ways to integrate with Siri, via `INIntent` and `NSUserActivity`.  Intents allow the user to perform actions without opening the app.  User Activity navigates the user to a particular place in the app.  
+
 
 ### Intents
 
@@ -108,6 +117,7 @@ You will have to implement the AppDelegate function `application(_ application: 
 
 ### Conclusion and Recommendations
 
+
 In the end, during our short excursion into the world of Siri Shortcuts, we found that UserActivities and Custom Intents worked as expected, but we were unable to get the system defined intents working. 
 This may have been our error, or it may be too early in the Xcode Beta release process to expect everything functional. Either way, you are welcome to check out our repository on GitHub and explore the project yourself.
 Feel free to create a PR if you have any suggested improvements.
@@ -123,4 +133,5 @@ With Siri Shortcuts, reminders to your users can feel more appropriate and more 
 The best part is, you can begin implementing this funcitonality today, using `@available(iOS 12.0, watchOS 5.0, *)` tags to avoid disrupting the experience for users who are slow to upgrade.
 The good news is that most users will upgrade: based on historical data, by Christmas 2018, enterprises can expect that 70% of their customers will be running iOS 12. 
 A year from now, that percentage will be close to 90%. Building for this experience now will put an enterprise ahead of the curve and car create an experience that edges out other apps in your space.
+
 
