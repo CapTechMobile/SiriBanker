@@ -35,9 +35,9 @@ Siri integration spawned a new term, *donation*.  When the user engages in an ac
 ![](blogImages/donate.jpeg)
 
 
-### Sample App
+### Sample App: SiriBanker
 
-You will find our [sample app](https://github.com/CapTechMobile/SiriBanker) on GitHub.  We did all our work on the first beta of iOS 12.  Not everything worked for us as expected.
+You will find our [sample app](https://github.com/CapTechMobile/SiriBanker) on GitHub.  We did all our work on the first beta of iOS 12.  Not everything worked for us as expected.  If you aren't interested in the code, just skip to our conclusions.  
 
 We call our app `SiriBanker`.  The goal is to build a simple banking app that can display information about multiple accounts.  There is nothing fancy here, not even authentication.  The user can view transactions and make transfers.
 
