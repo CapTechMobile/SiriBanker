@@ -1,6 +1,19 @@
-blog.md
 
-# Siri Shortcuts
+
+# First Look: Siri Shortcuts
+
+The common impression is that Siri does not compare with Alexa and Google Voice.  Siri seems stuck in the past while Google and Amazon continue to accelerate.
+
+
+
+### Intents
+
+
+### User Activity
+
+
+### Conclusion
+
 
 Siri vs. Alexa
 
