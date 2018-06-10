@@ -12,31 +12,33 @@ WWDC 2018, with one of the most enthusiastic presenters in memory, changes all t
 
 ### 25 Extensions and Counting
 
-Every year Apple comes up with new ways for apps to integrate themselves within the operating system.  There are now 25 different extensions you can add to an app to keep it from *getting marooned on the home screen*.  From Spotlight search, to Apple Watch extensions, to local notifications.  Over the last couple of years, Apple has gradually opened up Siri to developers.  At first the list of voice intents was quite restrictive.  Now apps can generate custom intents to handle just about any kind of user interaction.
+Every year Apple comes up with new ways for apps to integrate themselves within the operating system.  There are now 25 different extensions you can add to an app to keep it from *getting marooned on the home screen*, ranging from Spotlight search, to Apple Watch extensions, to messages.  
+
+Over the last couple of years, Apple has gradually opened up Siri to developers.  At first the list of voice intents was quite restrictive.  Now apps can generate custom intents to handle just about any kind of user interaction.
 
 ![](blogImages/AddingExtension.jpeg)
 
 ### A Problem Never Solved Well by Notifications
 
-Until now, the best way to interact with users outside the app was through notifications.  But 
+The enterprise *tries* to sends useful information via notifications, but most notifications get ignored.  Indeed, app retention has been shown to be inversely proportional to the number of notifications sent.
 
-You can't carry an Alexa with you.  There's nothing like the menagerie of iOS apps on Alexa.  CapTech's enterprise customers have invested in iOS.  Now they can 
+Siri shortcuts act like a personal notification server for the user.  Siri shortcuts happen when the *user initiates*  actions that are likely to be repeated.  Compared to that, remote notifications seem more like mere guesses.
 
-This is part of Apple's ongoing effort to keep apps from getting marooned on the home screen.  The challenge is to integrate application functionality into the operating system of the device.  Siri shortcuts offer
+Given the location, time, and day of the week, that user initiates an action, Siri can suggest that action at a time that makes sense.
 
-This is our first impression after a single weekend exploring Siri Shortcuts. 
+Even better, the user can record customized phrases to trigger the Siri shortcuts on demand.  These shortcuts can then be combined with other shortcuts to make a chain of events happen.  What's great about this: all actions are under user control and local to the device.  
+
 
 ### Sample App
 
-You will find our [sample app](https://github.com/CapTechMobile/SiriBanker) on GitHub.  
+You will find our [sample app](https://github.com/CapTechMobile/SiriBanker) on GitHub.  We did all our work on the first beta of iOS 12.  Not everything worked for us as expected.
 
+We call our app `SiriBanker`.  The goal is to build a simple banking app that can display information about multiple accounts.  There is nothing fancy here, not even authentication.  The user can view transactions and make transfers.
 
-### User Initiati
+We wanted to see how far we could push Siri to:
 
-
- 
-
-
+* View account information
+* Make transfers
 
 ### Intents
 
