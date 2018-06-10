@@ -28,6 +28,12 @@ Given the location, time, and day of the week, that user initiates an action, Si
 
 Even better, the user can record customized phrases to trigger the Siri shortcuts on demand.  These shortcuts can then be combined with other shortcuts to make a chain of events happen.  What's great about this: all actions are under user control and local to the device.  
 
+### Non-Profit Siri
+
+Siri integration spawned a new term, *donation*.  When the user engages in an activity that the user might want to repeat with Siri, the app needs to *donate* it to Siri.  Seems like a strange verb, but here's what the code looks like:
+
+![](blogImages/donate.jpeg)
+
 
 ### Sample App
 
@@ -39,6 +45,9 @@ We wanted to see how far we could push Siri to:
 
 * View account information
 * Make transfers
+
+There are two ways to integrate with Siri, via `INIntent` and `NSUserActivity`.  Intents allow the user to perform actions with opening the app.  User Activity navigates the user to a particular place in the app.  
+
 
 ### Intents
 
@@ -110,8 +119,8 @@ You will have to implement the AppDelegate function `application(_ application: 
 
 
 - Shortcuts are an answer to Google assistant, Alexa
-- Designed to leverage machine learning to make siri smarter and give developers a way to better integrate their apps into the OS
-- Its clear that apple wants your app to be much more than just an icon on the homescreen. Apps now should strive to be seamlessly woven into the device experience
+- Designed to leverage machine learning to make Siri smarter and give developers a way to better integrate their apps into the OS
+- It's clear that apple wants your app to be much more than just an icon on the home screen. Apps now should strive to be seamlessly woven into the device experience
 - Doing this prevents your device from being 'lost in the shuffle,' or forgotten on the home screen.
 - Some apps in distribution today leverage local notifications to 'remind' the user to open the app. With Siri shortcuts,
 - By using @available tags, you can begin implementing this functionality now, and avoid disrupting current user experiece for users who have not upgraded
@@ -119,58 +128,4 @@ You will have to implement the AppDelegate function `application(_ application: 
 - Building for this experiece now will put an enterprise ahead of the game and can create an experience that edges out other apps in your space.
 
 
-
-//////////////
-
-
-You can implment it now.  By Christmas 2018, enterprises can expect that 70% of their customers will be running iOS 12.  A year from now, that percentage will be close to 90%.  With the `@Available` tag, our customers can deploy code that 
-
-
-Siri vs. Alexa
-
-Common knowledge is that Amazon’s Alexa and Google Voice are more powerful than Siri.
-
-But you can’t carry a dot around in your pocket.  There’s no battery.
-
-What makes powerful is that 
-
-Ongoing effort to keep apps from getting forgotten on your home screen.
-
-Sort of a substitute for notifications.
-
-ultra enthusiastic.  jet packs on his shoes.  
-
-70 % of your users are going to be on by the end of the year.
-
-You can use the `@available(iOS 12.0, watchOS 5.0, *)`
-
-To make it work with old users.  So there’s no need to wait.
-
-Missing Intent Title
-
-Siri Shortcuts vs notifications.   
-
-project setup.
-
- 
-### Random notes
-iOS 12 Only
-It may take a year to get your intents up to speed.
-
-There is no reason why you can’t build it in now for the fall.
-
-Missing Title
-
-There’s a banking up there.  Figure out what’s wrong and help us with a PR.
-
-Missing Title
-
-Key steps:
-* Entitlments
-* App Group
-* Turn on Debugging
-* 
-
-Where does it go.
-  (img)
 

@@ -54,7 +54,7 @@ class AccountDetailsViewController: UIViewController {
         let interaction = INInteraction(intent: intent, response: nil)
         interaction.donate { error in
             if error != nil {
-                if let error = error as NSError? {
+                if (error as NSError?) != nil {
                     print("Interaction donation failed:")
                 }
             } else {
