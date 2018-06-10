@@ -36,7 +36,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>View ${accountName}</string>
+					<string>Examine ${accountName}</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>gHsWYf</string>
 				</dict>

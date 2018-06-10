@@ -8,6 +8,7 @@
 
 import SiriBankerKit
 import UIKit
+import Intents
 
 class AccountDetailsViewController: UIViewController {
     @IBOutlet var topBackgroundView: UIView!
@@ -38,6 +39,27 @@ class AccountDetailsViewController: UIViewController {
         accountBalanceDescLabel.text = "available balance"
         if account.accountType == .checking {
             donateActivity()
+        }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard let account = account else { return }
+        donateInteraction(for: account)
+    }
+
+    private func donateInteraction(for account: Account) {
+        let intent = ViewAccountIntent()
+        intent.accountName = account.accountName
+        let interaction = INInteraction(intent: intent, response: nil)
+        interaction.donate { error in
+            if error != nil {
+                if let error = error as NSError? {
+                    print("Interaction donation failed:")
+                }
+            } else {
+                print("Successfully donated interaction")
+            }
         }
     }
 
