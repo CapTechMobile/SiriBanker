@@ -71,6 +71,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         rootViewController.selectedIndex = accountsSummaryIndex
         detailsView.account = customer.accounts.first(where: { $0.accountType == .checking })
         accountSummaryNavVC.popToRootViewController(animated: false)
-        accountSummaryNavVC.pushViewController(detailsView, animated: true)
+        accountSummaryNavVC.pushViewController(detailsView, animated: false)
     }
 }
