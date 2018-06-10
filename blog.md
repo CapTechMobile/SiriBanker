@@ -2,6 +2,8 @@
 
 # First Look: Siri Shortcuts
 
+by Allen White and Mark Broski
+
 ### Introduction
 
 The common impression is that Siri does not compare with Alexa and Google Voice.  Siri seems stuck in the past compared to its rivals.  Voice assistants are OK for general information like Wikipedia or weather or sports, but they lag when it comes to *personal* information.  
@@ -119,18 +121,25 @@ You will have to implement the AppDelegate function `application(_ application: 
 
 
 In the end, during our short excursion into the world of Siri Shortcuts, we found that UserActivities and Custom Intents worked as expected, but we were unable to get the system defined intents working. 
+
 This may have been our error, or it may be too early in the Xcode Beta release process to expect everything functional. Either way, you are welcome to check out our repository on GitHub and explore the project yourself.
+
 Feel free to create a PR if you have any suggested improvements.
 
 Siri Shortcuts is Apple's response to the gap that has existed between both Google's voice assistant and Alexa. 
-The feature is designed to leverage machine learning to make siri more intelligent, and puts the control into the hands of the enterprise.
-Rather than simply responding to the commands built in, with programmable custom intents and userActivities, developers can allow siri to respond to custom voice commands and intelligently suggest actions within your application.
-This furthers Apple's vision for a design-oriented experience around their devices. It's clear that Apple wants your app to be much more that just an icon on the homescreen. 
-Apps now should strive to be seamlessly woven into the device experiece. Doing this prevents your app from being 'lost in the shuffle,' or forgotten on the homescreen. 
-Some apps in distribution today attempt to leverage local and remote notifications to 'remind' the user to open the app in an unintrusive way. 
+
+The feature is designed to leverage machine learning to make Siri more intelligent, and puts the control into the hands of the enterprise.
+
+Rather than simply responding to the commands built in, with programmable custom intents and userActivities, developers can allow Siri to respond to custom voice commands and intelligently suggest actions within your application.
+
+This furthers Apple's vision for a design-oriented experience around their devices. It's clear that Apple wants your app to be much more that just an icon on the home screen. 
+Apps now should strive to be seamlessly woven into the device experience. Doing this prevents your app from being 'lost in the shuffle,' or forgotten on the home screen. 
+Some apps in distribution today attempt to leverage local and remote notifications to 'remind' the user to open the app in an un-intrusive way. 
+
 With Siri Shortcuts, reminders to your users can feel more appropriate and more eloquent.
 
 The best part is, you can begin implementing this funcitonality today, using `@available(iOS 12.0, watchOS 5.0, *)` tags to avoid disrupting the experience for users who are slow to upgrade.
+
 The good news is that most users will upgrade: based on historical data, by Christmas 2018, enterprises can expect that 70% of their customers will be running iOS 12. 
 A year from now, that percentage will be close to 90%. Building for this experience now will put an enterprise ahead of the curve and car create an experience that edges out other apps in your space.
 
