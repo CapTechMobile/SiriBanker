@@ -2,7 +2,39 @@
 
 # First Look: Siri Shortcuts
 
-The common impression is that Siri does not compare with Alexa and Google Voice.  Siri seems stuck in the past while Google and Amazon continue to accelerate.
+### Introduction
+
+The common impression is that Siri does not compare with Alexa and Google Voice.  Siri seems stuck in the past compared to its rivals.  Voice assistants are OK for general information like Wikipedia or weather or sports, but they lag when it comes to *personal* information.  
+
+WWDC 2018, with one of the most enthusiastic presenters in memory, changes all that.
+
+![](blogImages/1.presentation.jpeg)
+
+### 25 Extensions and Counting
+
+Every year Apple comes up with new ways for apps to integrate themselves within the operating system.  There are now 25 different extensions you can add to an app to keep it from getting marooned on the home screen.  From Spotlight search, to Apple Watch extensions, to local notifications.  Over the last couple of years, Apple has gradually opened up Siri to developers.  At first the list of voice intents was quite restrictive.  Now apps can generate custom intents to handle just about any kind of user interaction.
+
+![](blogImages/AddingExtension.jpeg)
+
+### A Problem Never Solved Well by Notifications
+
+Until now, the best way to interact with users outside the app was 
+
+You can't carry an Alexa with you.  There's nothing like the menagerie of iOS apps on Alexa.  CapTech's enterprise customers have invested in iOS.  Now they can 
+
+This is part of the ongoing effort to keep apps from getting marooned on the home screen.  The challenge is to integrate application functionality into the operating system of the device.  Siri shortcuts offer
+
+This is our first impression after a single weekend exploring Siri Shortcuts. 
+
+### Sample App
+
+You will find our [sample app](https://github.com/CapTechMobile/SiriBanker) on GitHub.  
+
+
+### User Initiati
+
+
+ 
 
 
 
@@ -12,7 +44,9 @@ The common impression is that Siri does not compare with Alexa and Google Voice.
 ### User Activity
 
 
-### Conclusion
+### Conclusion and Recommendations
+
+You can implment it now.  By Christmas 2018, enterprises can expect that 70% of their customers will be running iOS 12.  A year from now, that percentage will be close to 90%.  With the `@Available` tag, our customers can deploy code that 
 
 
 Siri vs. Alexa
