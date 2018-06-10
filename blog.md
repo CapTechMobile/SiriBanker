@@ -24,6 +24,10 @@ To make it work with old users.  So there’s no need to wait.
 
 Missing Intent Title
 
+Siri Shortcuts vs notifications.   
+
+project setup.
+
  
 ### Random notes
 iOS 12 Only

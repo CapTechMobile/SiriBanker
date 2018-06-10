@@ -25,6 +25,7 @@
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>INTransferMoneyIntent</string>
+		<string>ViewAccountIntent</string>
 		<string>com.captech.siribanker.viewCheckingAccount</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
