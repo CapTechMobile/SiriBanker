@@ -11,6 +11,14 @@ The common impression is that Siri does not compare with Alexa and Google Voice.
 
 ### User Activity
 
+One new feature is suggested activities via Siri Shortcuts. 
+These shortcuts are presented to the user at a time the system considers to be relevant, or when the user searches for a keyword in spotlight search.
+In our banking app, we created a shortcut for accessing a user's checking account. When the user completes the action normally by visiting their Checking Account Details view, the app 
+creates an NSUserActivity which defines the action, and donates it to the system. Donations like these are tracked internally on the device, and used to suggest the shortcut to the user at an appropriate time.
+For example, if a customer of your bank is constantly revisiting their checking account balance at noon every other Friday, Siri and the system will learn this behavior and suggest the action to the user on subsequent Fridays via the lock screen.
+Alternatively, if the user searches in spotlight for the phrase or keywords associated with the NSUserActivity, a suggestion will appear in the search results that will navigate the user to the appropriate screen.
+You will have to implement the AppDelegate function `application(_ application: continue userActivity: restorationHandler: ) -> Bool` to handle the user selecting those shortcuts.
+
 
 ### Conclusion
 
