@@ -46,7 +46,7 @@ We wanted to see how far we could push Siri to:
 * View account information
 * Make transfers
 
-There are two ways to integrate with Siri, via `INIntent` and `NSUserActivity`.  Intents allow the user to perform actions with opening the app.  User Activity navigates the user to a particular place in the app.  
+There are two ways to integrate with Siri, via `INIntent` and `NSUserActivity`.  Intents allow the user to perform actions without opening the app.  User Activity navigates the user to a particular place in the app.  
 
 
 ### Intents
