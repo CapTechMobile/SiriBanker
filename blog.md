@@ -108,76 +108,19 @@ You will have to implement the AppDelegate function `application(_ application: 
 
 ### Conclusion and Recommendations
 
+In the end, during our short excursion into the world of Siri Shortcuts, we found that UserActivities and Custom Intents worked as expected, but we were unable to get the system defined intents working. 
+This may have been our error, or it may be too early in the Xcode Beta release process to expect everything functional. Either way, you are welcome to check out our repository on GitHub and explore the project yourself.
+Feel free to create a PR if you have any suggested improvements.
 
 Siri Shortcuts is Apple's response to the gap that has existed between both Google's voice assistant and Alexa. 
 The feature is designed to leverage machine learning to make siri more intelligent, and puts the control into the hands of the enterprise.
 Rather than simply responding to the commands built in, with programmable custom intents and userActivities, developers can allow siri to respond to custom voice commands and intelligently suggest actions within your application.
-This furthers Apple's vision for design-oriented devices
+This furthers Apple's vision for a design-oriented experience around their devices. It's clear that Apple wants your app to be much more that just an icon on the homescreen. 
+Apps now should strive to be seamlessly woven into the device experiece. Doing this prevents your app from being 'lost in the shuffle,' or forgotten on the homescreen. 
+Some apps in distribution today attempt to leverage local and remote notifications to 'remind' the user to open the app in an unintrusive way. 
+With Siri Shortcuts, reminders to your users can feel more appropriate and more eloquent.
 
-
-- Shortcuts are an answer to Google assistant, Alexa
-- Designed to leverage machine learning to make siri smarter and give developers a way to better integrate their apps into the OS
-- Its clear that apple wants your app to be much more than just an icon on the homescreen. Apps now should strive to be seamlessly woven into the device experience
-- Doing this prevents your device from being 'lost in the shuffle,' or forgotten on the home screen.
-- Some apps in distribution today leverage local notifications to 'remind' the user to open the app. 
-- With Siri shortcuts, reminders to your users can be more appropriate and more eloquent.
-- By using @available tags, you can begin implementing this functionality now, and avoid disrupting current user experiece for users who have not upgraded
-- Most will upgrade tho: By Christmas 2018, enerprises can expect that 70% of their customers ...
-- Building for this experiece now will put an enterprise ahead of the game and can create an experience that edges out other apps in your space.
-
-
-
-//////////////
-
-
-You can implment it now.  By Christmas 2018, enterprises can expect that 70% of their customers will be running iOS 12.  A year from now, that percentage will be close to 90%.  With the `@Available` tag, our customers can deploy code that 
-
-
-Siri vs. Alexa
-
-Common knowledge is that Amazon’s Alexa and Google Voice are more powerful than Siri.
-
-But you can’t carry a dot around in your pocket.  There’s no battery.
-
-What makes powerful is that 
-
-Ongoing effort to keep apps from getting forgotten on your home screen.
-
-Sort of a substitute for notifications.
-
-ultra enthusiastic.  jet packs on his shoes.  
-
-70 % of your users are going to be on by the end of the year.
-
-You can use the `@available(iOS 12.0, watchOS 5.0, *)`
-
-To make it work with old users.  So there’s no need to wait.
-
-Missing Intent Title
-
-Siri Shortcuts vs notifications.   
-
-project setup.
-
- 
-### Random notes
-iOS 12 Only
-It may take a year to get your intents up to speed.
-
-There is no reason why you can’t build it in now for the fall.
-
-Missing Title
-
-There’s a banking up there.  Figure out what’s wrong and help us with a PR.
-
-Missing Title
-
-Key steps:
-* Entitlments
-* App Group
-* Turn on Debugging
-* 
-
-Where does it go.
-  (img)
+The best part is, you can begin implementing this funcitonality today, using `@available(iOS 12.0, watchOS 5.0, *)` tags to avoid disrupting the experience for users who are slow to upgrade.
+The good news is that most users will upgrade: based on historical data, by Christmas 2018, enterprises can expect that 70% of their customers will be running iOS 12. 
+A year from now, that percentage will be close to 90%. Building for this experience now will put an enterprise ahead of the curve and car create an experience that edges out other apps in your space.
 
