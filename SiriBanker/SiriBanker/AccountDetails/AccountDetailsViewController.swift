@@ -6,9 +6,9 @@
 //  Copyright © 2018 LBrands. All rights reserved.
 //
 
+import Intents
 import SiriBankerKit
 import UIKit
-import Intents
 
 class AccountDetailsViewController: UIViewController {
     @IBOutlet var topBackgroundView: UIView!

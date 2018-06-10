@@ -22,7 +22,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling {
         // Do any additional setup after loading the view.
     }
 
-    @IBOutlet weak var currentBalanceLabel: UILabel! {
+    @IBOutlet var currentBalanceLabel: UILabel! {
         didSet {
             let formatter = Formatters.currencyFormatter
             let account = customer.accounts.first!

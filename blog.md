@@ -93,15 +93,31 @@ You can also create system intents using the intent definition file, but we coul
 
 One new feature is suggested activities via Siri Shortcuts. 
 These shortcuts are presented to the user at a time the system considers to be relevant, or when the user searches for a keyword in spotlight search.
-In our banking app, we created a shortcut for accessing a user's checking account. 
-When the user completes the action normally by visiting their Checking Account Details view, the app 
+
+In our banking app, we created a shortcut for accessing a user's checking account. When the user completes the action normally by visiting their Checking Account Details view, the app 
 creates an NSUserActivity which defines the action, and donates it to the system. Donations like these are tracked internally on the device, and used to suggest the shortcut to the user at an appropriate time.
 For example, if a customer of your bank is constantly revisiting their checking account balance at noon every other Friday, Siri and the system will learn this behavior and suggest the action to the user on subsequent Fridays via the lock screen.
-Alternatively, if the user searches in spotlight for the phrase or keywords associated with the NSUserActivity, a suggestion will appear in the search results that will navigate the user to the appropriate screen.
+
+Alternatively, if the user searches in spotlight for the phrase or keywords associated with the NSUserActivity, a suggestion will appear in the search results that will navigate the user to the appropriate screen. A screenshot of this functionality is below.
+![](blogImages/checkingSpotlightSuggestion.png)
+
 You will have to implement the AppDelegate function `application(_ application: continue userActivity: restorationHandler: ) -> Bool` to handle the user selecting those shortcuts.
 
 
 ### Conclusion and Recommendations
+
+
+- Shortcuts are an answer to Google assistant, Alexa
+- Designed to leverage machine learning to make siri smarter and give developers a way to better integrate their apps into the OS
+- Its clear that apple wants your app to be much more than just an icon on the homescreen. Apps now should strive to be seamlessly woven into the device experience
+- By using @available tags, you can begin implementing this functionality now, and avoid disrupting current user experiece for users who have not upgraded
+- Most will upgrade tho: By Christmas 2018, enerprises can expect that 70% of their customers ...
+- Building for this experiece now will put an enterprise ahead of the game and can create an experience that edges out other apps in your space.
+
+
+
+//////////////
+
 
 You can implment it now.  By Christmas 2018, enterprises can expect that 70% of their customers will be running iOS 12.  A year from now, that percentage will be close to 90%.  With the `@Available` tag, our customers can deploy code that 
 
