@@ -24,6 +24,7 @@
 	<string>SiriBanker wants to make transfers via Siri</string>
 	<key>NSUserActivityTypes</key>
 	<array>
+		<string>INTransferMoneyIntent</string>
 		<string>com.captech.siribanker.viewCheckingAccount</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
